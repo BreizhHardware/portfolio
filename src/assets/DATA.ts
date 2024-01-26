@@ -57,6 +57,12 @@ const Felix = {
             description: "Projet de robot avec le club Modelec ISEN pour la coupe de france de robotique (Developpement et déploiment sur Raspberry Pi)",
             tags: ["C++", "QT", "Raspberry Pi"],
             link: "https://github.com/modelec"
+        },
+        {
+            title: "Mercury Cloud",
+            description: "Projet d'herbergeur de serveur de jeu et VPS. Poste de support technique, administrateur des service VPS, Game et web.",
+            tags: ["Linux", "Virtualisation", "CPanel", "Plesk", "WHMCS"],
+            link: "https://mercurycloud.fr/"
         }
     ]
 };
