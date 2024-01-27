@@ -18,11 +18,13 @@ const projectCard = ({ project: { title, description, tags, link} }) => {
                     <div className="px-4 py-1 border-2 rounded-full dark:text-gray-300">{tag}</div>
                 ))}
             </div>
+            {title !== "Mercury Cloud" && (
             <div className="w-full text-center">
                 <GitHubButton href={link} data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star ntkme/github-buttons on GitHub">Star</GitHubButton>
                 {" "}
                 <GitHubButton href={link + "/fork"} data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork ntkme/github-buttons on GitHub">Fork</GitHubButton>
             </div>
+            )}
         </div>
     );
 };
