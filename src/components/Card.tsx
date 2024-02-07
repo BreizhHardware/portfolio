@@ -1,9 +1,10 @@
 // @ts-ignore
 import React from 'react';
-import profile from "../assets/profile.jpeg";
 import { FaGithub, FaTwitter, FaLinkedin, FaRegEnvelope } from 'react-icons/fa';
 
 function Card({name, title, social: {github, twitter, linkedin, mail}}){
+    //Get avatar from gravatar using email
+    const profile = `https://1.gravatar.com/avatar/4d43af207280d1d23e2a2905577c7b6167723fec2d33f946cc86f114c1a85b8d?size=256`;
     return (
         <div className="w-full">
             <div className="flex flex-col items-center justify-center max-w-xs mx-auto bg-white shadow-xl rounded-xl p-5 dark:bg-gray-800">
