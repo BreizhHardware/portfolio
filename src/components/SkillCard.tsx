@@ -7,7 +7,7 @@ const iconClassName = "mx-auto text-4xl text-gray-800 dark:text-gray-200";
 const iconMapping = {
     "C": <FaCuttlefish className={iconClassName} />,
     "C++": <FaCuttlefish className={iconClassName} />,
-    "Administration Système": <FaServer className={iconClassName} />,
+    "Admin Système": <FaServer className={iconClassName} />,
     "Python": <FaPython className={iconClassName} />,
     "PHP": <FaPhp className={iconClassName} />,
 };

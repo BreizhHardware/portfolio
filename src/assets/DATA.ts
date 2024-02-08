@@ -21,7 +21,7 @@ const Felix = {
             skillLevel: 50,
         },
         {
-            skillName: "Administration Système",
+            skillName: "Admin Système",
             skillLevel: 80,
         },
         {
