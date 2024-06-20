@@ -12,3 +12,7 @@ git clone https://github.com/BreizhHardware/portfolio.git
 cd portfolio
 npm run build
 ```
+
+[![Deploy to server](https://github.com/BreizhHardware/portfolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/BreizhHardware/portfolio/actions/workflows/deploy.yml)
+
+[ [Voir le site](https://mrqt.fr) ]
