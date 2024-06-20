@@ -27,11 +27,12 @@ jobs:
           npm run build
 
       - name: Copy build directory to server
-        uses: milanmk/actions-file-deployer@master
+        uses: Dylan700/sftp-upload-action@v1.2.3
         with:
-          remote-protocol: sftp
-          remote-host: ${{ secrets.SERVER_HOST }}
-          remote-user: ${{ secrets.SERVER_USERNAME }}
-          remote-password: ${{ secrets.SERVER_PASSWORD }}
-          remote-path: ${{ secrets.SERVER_DIRECTORY }}
-          report-port: ${{ secrets.SERVER_PORT }}
+          server: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_SERNAME }}
+          password: ${{ secrets.SERVER_PASSWORD }}
+          port: ${{ secrets.SERVER_PORT }}
+          uploads: |
+            ./build => /webroot/
+          delete: true
