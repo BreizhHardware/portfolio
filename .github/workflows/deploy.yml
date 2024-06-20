@@ -31,7 +31,7 @@ jobs:
         with:
           remote-protocol: sftp
           remote-host: ${{ secrets.SERVER_HOST }}
-          remote-user: ${{ secrets.SERVER_USER }}
+          remote-user: ${{ secrets.SERVER_USERNAME }}
           remote-password: ${{ secrets.SERVER_PASSWORD }}
           remote-path: ${{ secrets.SERVER_DIRECTORY }}
           report-port: ${{ secrets.SERVER_PORT }}
