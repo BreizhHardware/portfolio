@@ -1,6 +1,6 @@
 // @ts-ignore
 import React from 'react';
-import { FaCuttlefish, FaPhp, FaPython, FaServer} from 'react-icons/fa';
+import {FaCuttlefish, FaHtml5, FaJs, FaLinux, FaPhp, FaPython, FaServer} from 'react-icons/fa';
 //@ts-ignore
 import ProgresBar from "./ProgresBar.tsx";
 
@@ -12,6 +12,9 @@ const iconMapping = {
     "Admin Système": <FaServer className={iconClassName} />,
     "Python": <FaPython className={iconClassName} />,
     "PHP": <FaPhp className={iconClassName} />,
+    "HTML/CSS": <FaHtml5 className={iconClassName} />,
+    "JS/TS": <FaJs className={iconClassName} />,
+    "Linux": <FaLinux className={iconClassName} />
 };
 
 interface SkillCardProps {
