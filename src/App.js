@@ -7,6 +7,7 @@ import Skills from "./components/Skills.tsx";
 import Project from "./components/Project.tsx";
 import Footer from "./components/Footer.tsx";
 import CV from "./components/CV.tsx";
+import Menu from "./components/Menu.tsx";
 import data from "./assets/DATA.ts";
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
 
     return (
         <div className="min-h-screen py-10 px-3 sm:px-5 bg-gray-100 dark:bg-gray-900">
+            <Menu />
             <div data-aos="face-down" data-aos-duration="800">
                 <Card name={data.name} title={data.title} social={data.social} />
             </div>
