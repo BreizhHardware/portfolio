@@ -75,6 +75,12 @@ const Felix = {
             description: "Projet d'herbergeur de serveur de jeu et VPS. Poste de support technique, administrateur des service VPS, Game et web.",
             tags: ["Linux", "Virtualisation", "CPanel", "Plesk", "WHMCS"],
             link: "https://mercurycloud.fr/"
+        },
+        {
+            title: "Projet C++ - ISEN CIR 2",
+            description: "Projet de fin de 4e semestre à l'ISEN Nantes. Création d'un jeu de type Tower Defense en C++ avec la librairie QT6.",
+            tags: ["C++", "QT"],
+            link: "https://github.com/BreizhHardware/Poulpes-de-l-Espace-La-derniere-ligne-de-Defense"
         }
     ]
 };
