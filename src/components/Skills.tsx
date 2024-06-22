@@ -1,5 +1,6 @@
 // @ts-ignore
 import React from 'react';
+// @ts-ignore
 import SkillCard from './SkillCard.tsx';
 
 function Skills({skills}) {
