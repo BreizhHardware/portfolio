@@ -71,7 +71,7 @@ const Felix = {
             link: "https://github.com/modelec"
         },
         {
-            title: "Mercury Cloud",
+            title: "MercuryCloud",
             description: "Projet d'herbergeur de serveur de jeu et VPS. Poste de support technique, administrateur des service VPS, Game et web.",
             tags: ["Linux", "Virtualisation", "CPanel", "Plesk", "WHMCS"],
             link: "https://mercurycloud.fr/"

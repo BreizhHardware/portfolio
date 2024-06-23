@@ -1,8 +1,12 @@
+// @ts-ignore
 import React from 'react';
 import { FaExternalLinkAlt} from "react-icons/fa";
 import GitHubButton from 'react-github-btn';
+import {useTranslation} from "react-i18next";
 
-const projectCard = ({ project: { title, description, tags, link} }) => {
+const ProjectCard = ({ project }) => {
+    const { t } = useTranslation();
+    const { title, link, tags } = project;
     return (
         <div className="group w-full sm:w-5/12 m-4 mx-auto p-6 rounded-xl border-2 border-gray-300 dark:border-gray-700">
             <a href={link}>
@@ -12,13 +16,13 @@ const projectCard = ({ project: { title, description, tags, link} }) => {
                 </h1>
             </a>
             <hr className="my-4" />
-            <p className="dark:text-gray-300">{description}</p>
+            <p className="dark:text-gray-300">{t(`projects.${project.title}.description`)}</p>
             <div className="mt-4 mb-8 flex flex-wrap justify-center items-center gap-2">
                 {tags.map((tag) => (
                     <div className="px-4 py-1 border-2 rounded-full dark:text-gray-300">{tag}</div>
                 ))}
             </div>
-            {title !== "Mercury Cloud" && (
+            {title !== "MercuryCloud" && (
             <div className="w-full text-center">
                 <GitHubButton href={link} data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star ntkme/github-buttons on GitHub">Star</GitHubButton>
                 {" "}
@@ -29,4 +33,4 @@ const projectCard = ({ project: { title, description, tags, link} }) => {
     );
 };
 
-export default projectCard;
+export default ProjectCard;
