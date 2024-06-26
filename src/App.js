@@ -30,7 +30,7 @@ function App() {
         document.documentElement.classList.toggle("dark");
     }
 
-    const { i18n } = useTranslation();
+    useTranslation();
 
     const toggleLanguage = () => {
         i18n.changeLanguage(i18n.language === "fr" ? "en" : "fr");
