@@ -1,7 +1,14 @@
 import React from "react";
 
-const ProgressBar = (props) => {
+interface ProgressBarProps {
+    bgcolor: string;
+    completed: number;
+}
+
+const ProgressBar = (props: ProgressBarProps) => {
     const { bgcolor, completed } = props;
+
+    const completedPercentage = completed + "%";
 
     const containerStyles = {
         height: 30,
@@ -14,10 +21,10 @@ const ProgressBar = (props) => {
 
     const fillerStyles = {
         height: '100%',
-        width: `${completed}%`,
+        width: completedPercentage,
         backgroundColor: bgcolor,
         borderRadius: 'inherit',
-        textAlign: 'right',
+        textAlign: 'right' as 'right',
         transition: 'width 1s ease-in-out',
     }
 

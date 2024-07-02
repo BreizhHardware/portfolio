@@ -6,7 +6,7 @@ import ProgresBar from "./ProgresBar.tsx";
 
 const iconClassName = "mx-auto text-4xl text-gray-800 dark:text-gray-200";
 
-const iconMapping = {
+const iconMapping: IconMapping = {
     "C": <FaCuttlefish className={iconClassName} />,
     "C++": <FaCuttlefish className={iconClassName} />,
     "Admin Système": <FaServer className={iconClassName} />,
@@ -19,6 +19,11 @@ const iconMapping = {
 
 interface SkillCardProps {
     skillName: string;
+    skillLevel: number;
+}
+
+type IconMapping = {
+    [key: string]: JSX.Element;
 }
 
 const SkillCard: React.FC<SkillCardProps> = ({skillName, skillLevel}) => {

@@ -3,7 +3,19 @@ import React from 'react';
 import { FaGithub, FaTwitter, FaLinkedin, FaRegEnvelope } from 'react-icons/fa';
 import {useTranslation} from "react-i18next";
 
-function Card({name, social: {github, twitter, linkedin, mail}}){
+interface Social {
+    github: string;
+    twitter: string;
+    linkedin: string;
+    mail: string;
+}
+
+interface CardProps {
+    name: string;
+    social: Social;
+}
+
+function Card({name, social: {github, twitter, linkedin, mail}}: CardProps){
     //Get avatar from gravatar using email
     const profile = `https://1.gravatar.com/avatar/4d43af207280d1d23e2a2905577c7b6167723fec2d33f946cc86f114c1a85b8d?size=256`;
     const { t } = useTranslation();

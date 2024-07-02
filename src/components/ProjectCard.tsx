@@ -4,7 +4,18 @@ import { FaExternalLinkAlt} from "react-icons/fa";
 import GitHubButton from 'react-github-btn';
 import {useTranslation} from "react-i18next";
 
-const ProjectCard = ({ project }) => {
+interface Project {
+    title: string;
+    link: string;
+    tags: string[];
+}
+
+interface ProjectCardProps {
+    project: Project;
+}
+
+
+const ProjectCard = ({ project }: ProjectCardProps) => {
     const { t } = useTranslation();
     const { title, link, tags } = project;
     return (
@@ -18,7 +29,7 @@ const ProjectCard = ({ project }) => {
             <hr className="my-4" />
             <p className="dark:text-gray-300">{t(`projects.${project.title}.description`)}</p>
             <div className="mt-4 mb-8 flex flex-wrap justify-center items-center gap-2">
-                {tags.map((tag) => (
+                {project.tags.map((tag) => (
                     <div className="px-4 py-1 border-2 rounded-full dark:text-gray-300">{tag}</div>
                 ))}
             </div>

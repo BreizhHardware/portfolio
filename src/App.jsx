@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaSun, FaMoon} from "react-icons/fa";
-import "./index.css";
+import ReactDOM from "react-dom";
+import './output.css';
 import Card from "./components/Card.tsx";
 import About from "./components/About.tsx";
 import Skills from "./components/Skills.tsx";
@@ -61,5 +62,7 @@ function App() {
         </div>
     );
 }
+
+ReactDOM.render(<App />, document.getElementById('root'));
 
 export default App;

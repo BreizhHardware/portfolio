@@ -4,13 +4,14 @@ import React from 'react';
 import ProjectCard from "./ProjectCard.tsx";
 import {useTranslation} from "react-i18next";
 
+// @ts-ignore
 function Projects({projects}) {
     const { t } = useTranslation();
     return(
         <div>
             <h1 className="mt-8 text-2xl md:text-4xl text-center font-extrabold dark:text-gray-200">{t('projects.title')}</h1>
                 <div className="flex-row flex-wrap flex justify-center gap-4">
-                    {projects.map((project) => (
+                    {projects.map((project: any) => (
                         <ProjectCard project={project} />
                     ))}
                 </div>
