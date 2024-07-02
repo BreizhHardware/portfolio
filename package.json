@@ -15,8 +15,8 @@
     "react-icons": "^5.2.1",
     "react-scripts": "^5.0.1",
     "sass": "^1.69.4",
+    "web-vitals": "^4.2.1",
     "typescript": "^5.5.3",
-    "web-vitals": "^4.2.0",
     "yarn": "^1.22.22"
   },
   "scripts": {
