@@ -20,7 +20,7 @@
   },
   "scripts": {
     "start": "vite",
-    "build": "tsc && vite build",
+    "build": "npx tsc && vite build",
     "serve": "vite preview",
     "build:css": "tailwindcss build src/index.css -o src/output.css"
   },

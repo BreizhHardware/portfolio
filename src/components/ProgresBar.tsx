@@ -3,6 +3,7 @@ import React from "react";
 interface ProgressBarProps {
     bgcolor: string;
     completed: number;
+    className?: string;
 }
 
 const ProgressBar = (props: ProgressBarProps) => {
