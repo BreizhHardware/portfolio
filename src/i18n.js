@@ -18,6 +18,7 @@ i18n
                     "projects.MercuryCloud.description": "Projet d'herbergeur de serveur de jeu et VPS. Poste de support technique, administrateur des service VPS, Game et web.",
                     "projects.Projet C++ - ISEN CIR 2.description": "Projet de fin de 4e semestre à l'ISEN Nantes. Création d'un jeu de type Tower Defense en C++ avec la librairie QT6.",
                     "cv.title": "Mon CV",
+                    "cv.path": "/CV%20Félix%20MARQUET.pdf",
                     "nav.about": "A propos de moi",
                     "nav.projects": "Mes projets",
                     "nav.cv": "Mon CV",
@@ -39,6 +40,7 @@ i18n
                     "nav.about": "About me",
                     "nav.projects": "My projects",
                     "nav.cv": "My CV",
+                    "cv.path": "/CV%20Félix%20MARQUET%20ENGLISH.pdf"
                 },
             },
         },
