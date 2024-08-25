@@ -9,6 +9,7 @@ on:
 jobs:
   build-test:
     runs-on: ubuntu-latest
+    environment: test
 
     steps:
       - name: Checkout code
