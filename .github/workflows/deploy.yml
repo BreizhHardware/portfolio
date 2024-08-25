@@ -36,4 +36,4 @@ jobs:
           port: ${{ secrets.SERVER_PORT }}
           uploads: |
             ./dist => /webroot/
-          delete: truetions/runs/${{ github.run_id }}
+          delete: true
