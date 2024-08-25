@@ -26,6 +26,15 @@ jobs:
           npm ci
           npm run build
 
+      - name: Create GitHub deployment
+        id: create_deployment
+        uses: octokit/request-action@v2.x
+        with:
+          route: POST /repos/${{ github.repository }}/deployments
+          ref: ${{ github.sha }}
+          environment: production
+          required_contexts: []
+
       - name: Copy build directory to server
         uses: Dylan700/sftp-upload-action@v1.2.3
         with:
@@ -36,3 +45,15 @@ jobs:
           uploads: |
             ./dist => /webroot/
           delete: true
+
+      - name: Update GitHub deployment status
+        if: success()
+        uses: octokit/request-action@v2.x
+        with:
+          route: POST /repos/${{ github.repository }}/deployments/${{ steps.create_deployment.outputs.data.id }}/statuses
+          state: success
+          environment: production
+          environment_url: https://mrqt.fr
+          log_url: https://mrqt.fr
+          description: Deployment succeeded
+          auto_inactive: true
