@@ -1,4 +1,4 @@
-name: Deploy to server
+name: Test build for dependabot
 
 on:
   push:
