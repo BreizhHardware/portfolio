@@ -1,0 +1,4 @@
+name: "Default setup"
+queries:
+  - javascript-security-and-quality.qls
+  - typescript-security-and-quality.qls
