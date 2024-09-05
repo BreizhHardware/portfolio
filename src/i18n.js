@@ -8,7 +8,7 @@ i18n
             fr: {
                 translation: {
                     "about.title": "A propos de moi",
-                    "about.description": "Je suis étudiant en 2e année à l'ISEN Nantes. Je suis passionné par l'informatique. J'ai appris à coder en autodidacte et je suis actuellement en train d'apprendre le C++ et le PHP. Je suis également passionné par l'électronique et le hardware. Je possède un homelab composé de 2 serveur, un DELL T320 et un DELL T330 les 2 sous proxmox.",
+                    "about.description": "Je suis étudiant en 3e année à l'ISEN Nantes en alternance chez Horoquartz. Je suis passionné par l'informatique. J'ai appris à coder en autodidacte et je suis actuellement en train d'apprendre le C++ et le PHP. Je suis également passionné par l'électronique et le hardware. Je possède un homelab composé de 2 serveur, un DELL T320 et un DELL T330 les 2 sous proxmox.",
                     "card.title": "Etudiant en 2e année a l'ISEN Nantes",
                     "projects.title": "Mes projets",
                     "projects.SansDomaineFixe.xyz.description": "Site web offrant des enregistrements DNS gratuits",
@@ -28,7 +28,7 @@ i18n
                 translation: {
                     "cv.title": "My CV",
                     "about.title": "About me",
-                    "about.description": "I am a second year student at ISEN Nantes. I am passionate about computer science. I learned to code on my own and I am currently learning C++ and PHP. I am also passionate about electronics and hardware. I have a homelab composed of 2 servers, a DELL T320 and a DELL T330 both under proxmox.",
+                    "about.description": "I am a thrid year student at ISEN Nantes in work-study program at Horoquartz. I am passionate about computer science. I learned to code on my own and I am currently learning C++ and PHP. I am also passionate about electronics and hardware. I have a homelab composed of 2 servers, a DELL T320 and a DELL T330 both under proxmox.",
                     "card.title": "Second year student at ISEN Nantes",
                     "projects.title": "My projects",
                     "projects.SansDomaineFixe.xyz.description": "Website offering free DNS records",
