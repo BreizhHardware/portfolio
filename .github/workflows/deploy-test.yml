@@ -1,4 +1,4 @@
-name: Test build for dependabot
+name: Deploy to server
 
 on:
   push:
@@ -7,9 +7,9 @@ on:
       - master
 
 jobs:
-  build-test:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    environment: test
+    environment: production
 
     steps:
       - name: Checkout code
@@ -22,11 +22,20 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install dependencies
+      - name: Install dependencies and build
         run: |
           npm ci
-
-      - name: Run build for production
-        run: |
           npm run build
 
+      - name: Install http-server
+        run: npm install --save-dev http-server
+
+      - name: Start HTTP server
+        run: npx http-server ./dist -p 8080 &
+        env:
+          CI: true
+
+      - name: Run Cypress tests
+        run: npm run test
+        env:
+          CYPRESS_baseUrl: http://localhost:8080

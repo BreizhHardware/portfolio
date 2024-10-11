@@ -12,6 +12,7 @@ import Menu from "./components/Menu.tsx";
 import data from "./assets/DATA.ts";
 import { useTranslation } from "react-i18next";
 import i18n from './i18n.js';
+import {createRoot} from "react-dom/client";
 
 function App() {
     const [theme, setTheme] = useState("light");
@@ -63,6 +64,9 @@ function App() {
     );
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(<App />);
+// ReactDOM.render(<App />, document.getElementById('root'));
 
 export default App;
