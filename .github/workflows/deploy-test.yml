@@ -38,3 +38,10 @@ jobs:
         run: npm run test
         env:
           CYPRESS_baseUrl: http://localhost:8080
+
+      - name: Upload Cypress screenshots
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots

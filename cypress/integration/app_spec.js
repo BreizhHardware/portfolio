@@ -8,4 +8,11 @@ describe('App Component', () => {
         cy.get('[data-testid="root"]', { timeout: 10000 }).should('exist');
         cy.get('[data-testid="root"]').should('have.class', 'min-h-screen py-10 px-3 sm:px-5 bg-gray-100 dark:bg-gray-900');
     });
+
+    it('should match the previous screenshot', () => {
+        cy.get('[data-testid="root"]').matchImageSnapshot({
+            failureThreshold: 0.01, // tolérance de 1%
+            failureThresholdType: 'percent', // type de tolérance (peut être 'pixel' ou 'percent')
+        });
+    });
 });
