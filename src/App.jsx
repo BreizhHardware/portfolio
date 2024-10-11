@@ -39,7 +39,7 @@ function App() {
     }
 
     return (
-        <div className="min-h-screen py-10 px-3 sm:px-5 bg-gray-100 dark:bg-gray-900">
+        <div className="min-h-screen py-10 px-3 sm:px-5 bg-gray-100 dark:bg-gray-900" data-testid="root">
             <Menu />
             <div data-aos="face-down" data-aos-duration="800" id="top">
                 <Card name={data.name} title={data.title} social={data.social} />
