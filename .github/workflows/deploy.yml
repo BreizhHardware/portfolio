@@ -47,19 +47,13 @@ jobs:
           name: cypress-screenshots
           path: cypress/screenshots
 
-      - name: Get changed files
-        uses: tj-actions/changed-files@v41
+      - name: Copy build directory to server
+        uses: Dylan700/sftp-upload-action@v1.2.3
         with:
-          since_last_remote_commit: true
-          separator: ","
-          files: "./dist/***"
-
-      - name: copy file to server
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.SERVER_HOST }}
+          server: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
           port: ${{ secrets.SERVER_PORT }}
-          source: "./dist/*"
-          target: /webroot/
+          uploads: |
+            ./dist => /webroot/
+          delete: true
