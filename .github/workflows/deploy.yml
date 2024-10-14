@@ -48,7 +48,7 @@ jobs:
           path: cypress/screenshots
 
       - name: Get changed files
-        uses: tj-actions/changed-files@v35
+        uses: tj-actions/changed-files@v41
         with:
           since_last_remote_commit: true
           separator: ","
