@@ -34,7 +34,7 @@ jobs:
         env:
           CI: true
 
-      - name: Run Cypress tests
+      - name: Run Cypress tests and Browserslist
         run: npm run test
         env:
           CYPRESS_baseUrl: http://localhost:8080
