@@ -61,5 +61,5 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
           port: ${{ secrets.SERVER_PORT }}
-          source: ${{ steps.changed-files.outputs.all_changed_files }}
+          source: "./dist/*"
           target: /webroot/
