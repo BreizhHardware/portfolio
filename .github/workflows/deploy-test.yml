@@ -45,14 +45,3 @@ jobs:
         with:
           name: cypress-screenshots
           path: cypress/screenshots
-
-      - name: Copy build directory to server
-        uses: Dylan700/sftp-upload-action@v1.2.3
-        with:
-          server: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USERNAME }}
-          password: ${{ secrets.SERVER_PASSWORD }}
-          port: ${{ secrets.SERVER_PORT }}
-          uploads: |
-            ./dist => /webroot/
-          dry-run: true
