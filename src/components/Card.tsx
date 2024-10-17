@@ -20,7 +20,7 @@ function Card({name, social: {github, twitter, linkedin, mail}}: CardProps){
     const profile = `https://1.gravatar.com/avatar/4d43af207280d1d23e2a2905577c7b6167723fec2d33f946cc86f114c1a85b8d?size=256`;
     const { t } = useTranslation();
     return (
-        <div className="w-full" id="top">
+        <div className="w-full" id="top" data-testid="card">
             <div className="flex flex-col items-center justify-center max-w-xs mx-auto bg-white shadow-xl rounded-xl p-5 dark:bg-gray-800">
                 <div className="">
                     <img

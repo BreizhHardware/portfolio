@@ -15,4 +15,8 @@ describe('App Component', () => {
             failureThresholdType: 'percent', // type de tolérance (peut être 'pixel' ou 'percent')
         });
     });
+
+    it('should render the Card component', () => {
+        cy.get('[data-testid="card"]').should('exist');
+    });
 });
