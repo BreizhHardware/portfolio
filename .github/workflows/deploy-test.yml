@@ -1,4 +1,4 @@
-name: Deploy to server
+name: Unit Test
 
 on:
   push:
