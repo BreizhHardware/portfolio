@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FaSun, FaMoon} from "react-icons/fa";
 import ReactDOM from "react-dom";
 import './output.css';
+import './other.css';
 import Card from "./components/Card.tsx";
 import About from "./components/About.tsx";
 import Skills from "./components/Skills.tsx";
@@ -40,26 +41,28 @@ function App() {
 
     return (
         <div className="min-h-screen py-10 bg-gray-100 dark:bg-gray-900 m-0" data-testid="root">
-            <Menu />
-            <div data-aos="face-down" data-aos-duration="800" id="top">
-                <Card name={data.name} title={data.title} social={data.social} />
+            <div className="mobile-margin">
+                <Menu />
+                <div data-aos="face-down" data-aos-duration="800" id="top">
+                    <Card name={data.name} title={data.title} social={data.social} />
+                </div>
+                <hr className="text-gray-800 dark:text-gray-200 mt-4"  id="about"/>
+                <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                    <About />
+                    <Skills skills={data.skills} />
+                    <hr className="text-gray-800 dark:text-gray-200 mt-4" id="projects" />
+                    <Project projects={data.projects} />
+                    <hr className="text-gray-800 dark:text-gray-200 mt-4" id="cv" />
+                    <CV />
+                    <Footer />
+                </div>
+                <button onClick={toggleTheme} className="fixed bottom-5 right-5 p-2 rounded-full bg-gray-100 dark:bg-gray-900 shadow-md">
+                    {theme === "light" ? <FaMoon size={20} className="text-gray-800" /> : <FaSun size={20} className="text-gray-200" />}
+                </button>
+                <button onClick={toggleLanguage} className="fixed bottom-5 right-16 p-2 rounded-full bg-gray-100 dark:bg-gray-900 shadow-md text-gray-800 dark:text-gray-200">
+                    {i18n.language === "fr" ? "EN" : "FR"}
+                </button>
             </div>
-            <hr className="text-gray-800 dark:text-gray-200 mt-4"  id="about"/>
-            <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
-                <About />
-                <Skills skills={data.skills} />
-                <hr className="text-gray-800 dark:text-gray-200 mt-4" id="projects" />
-                <Project projects={data.projects} />
-                <hr className="text-gray-800 dark:text-gray-200 mt-4" id="cv" />
-                <CV />
-                <Footer />
-            </div>
-            <button onClick={toggleTheme} className="fixed bottom-5 right-5 p-2 rounded-full bg-gray-100 dark:bg-gray-900 shadow-md">
-                {theme === "light" ? <FaMoon size={20} className="text-gray-800" /> : <FaSun size={20} className="text-gray-200" />}
-            </button>
-            <button onClick={toggleLanguage} className="fixed bottom-5 right-16 p-2 rounded-full bg-gray-100 dark:bg-gray-900 shadow-md text-gray-800 dark:text-gray-200">
-                {i18n.language === "fr" ? "EN" : "FR"}
-            </button>
         </div>
     );
 }
