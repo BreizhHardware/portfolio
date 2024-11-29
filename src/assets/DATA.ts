@@ -81,6 +81,18 @@ const Felix = {
             description: "Projet de fin de 4e semestre à l'ISEN Nantes. Création d'un jeu de type Tower Defense en C++ avec la librairie QT6.",
             tags: ["C++", "QT"],
             link: "https://github.com/BreizhHardware/Poulpes-de-l-Espace-La-derniere-ligne-de-Defense"
+        },
+        {
+            title: "Github NTFY",
+            description: "Projet de notification pour les releases github et dockerhub qui envoie des notifications sur ntfy, gotify et discord",
+            tags: ["Python", "Docker", "Github Actions"],
+            link: "https://github.com/BreizhHardware/ntfy_alerts"
+        },
+        {
+            title: "Projet C++ - ISEN CIPA 3",
+            description: "Projet de jeu de simulation de comportement de banc de poisson en C++ avec la librairie SLD2, avec support du multijoueur.",
+            tags: ["C++", "SDL2", "Multiplayer"],
+            link: "https://github.com/BreizhHardware/bloubloulespoissons"
         }
     ]
 };
