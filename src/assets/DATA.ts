@@ -47,12 +47,6 @@ const Felix = {
     ],
     projects: [
         {
-            title: "SansDomaineFixe.xyz",
-            description: "Site web offrant des enregistrements DNS gratuits",
-            tags: ["TS", "tailwindcss", "pocketbase"],
-            link: "https://github.com/BreizhHardware/sansdomainefixe.xyz"
-        },
-        {
             title: "Front end starter",
             description: "Mon starter personnel pour projet front end",
             tags: ["HTML", "CSS", "JS"],
