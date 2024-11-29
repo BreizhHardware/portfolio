@@ -6,3 +6,11 @@
         margin: 10px;
     }
 }
+
+@media (min-width: 769px) {
+    .skill-margin {
+        margin-left: 10em;
+        margin-right: 10em;
+    }
+
+}
