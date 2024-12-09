@@ -9,7 +9,7 @@
     "aos": "^2.3.4",
     "browserslist": "^4.24.2",
     "browserslist-useragent": "^4.0.0",
-    "cypress": "^13.15.1",
+    "cypress": "^13.16.1",
     "i18next": "^23.16.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
