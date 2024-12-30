@@ -51,9 +51,9 @@
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@simonsmith/cypress-image-snapshot": "^9.1.0",
-    "@vitejs/plugin-react": "^4.3.3",
+    "@vitejs/plugin-react": "^4.3.4",
     "tailwindcss": "^3.4.14",
-    "vite": "^5.4.10",
+    "vite": "^6.0.6",
     "vite-plugin-svgr": "^4.3.0",
     "vite-tsconfig-paths": "^5.1.3"
   }
