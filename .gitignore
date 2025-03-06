@@ -26,3 +26,26 @@ yarn-error.log*
 .idea
 
 dist
+/src/components/About.js
+/src/components/Card.js
+/src/components/CV.js
+/src/assets/DATA.js
+/src/components/Footer.js
+/cypress/fixtures/test-redirections/idObjES6Export.js
+/cypress/fixtures/test-redirections/idObjES6Import.js
+/cypress/fixtures/test-redirections/idObjES6ImportExport.js
+/cypress/fixtures/__tests__/import-es6-export-test.js
+/cypress/fixtures/__tests__/import-es6-import-export-test.js
+/cypress/fixtures/__tests__/import-es6-import-test.js
+/cypress/fixtures/__tests__/import-vanilla-test.js
+/cypress/fixtures/__tests__/index-test.js
+/src/components/Menu.js
+/src/components/ProgresBar.js
+/src/components/Project.js
+/src/components/ProjectCard.js
+/cypress/fixtures/__tests__/require-es6-export-test.js
+/cypress/fixtures/__tests__/require-es6-import-export-test.js
+/cypress/fixtures/__tests__/require-es6-import-test.js
+/cypress/fixtures/__tests__/require-vanilla-test.js
+/src/components/SkillCard.js
+/src/components/Skills.js

@@ -25,7 +25,7 @@
     "start": "vite",
     "build": "npx tsc && vite build",
     "serve": "vite preview",
-    "build:css": "tailwindcss build src/index.css -o src/output.css",
+    "build:css": "tailwindcss build -i src/index.css -o src/output.css",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
     "test": "browserslist && cypress run"
