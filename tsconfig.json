@@ -17,6 +17,7 @@
     "jsx": "react-jsx",
     "baseUrl": "./src",
     "types": ["@simonsmith/cypress-image-snapshot/types"],
+    "outDir": "./dist",
   },
   "include": ["src"]
 }

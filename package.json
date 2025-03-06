@@ -4,20 +4,20 @@
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.0.1",
-    "@testing-library/user-event": "^14.5.2",
+    "@testing-library/react": "^16.2.0",
+    "@testing-library/user-event": "^14.6.1",
     "aos": "^2.3.4",
-    "browserslist": "^4.24.2",
+    "browserslist": "^4.24.4",
     "browserslist-useragent": "^4.0.0",
-    "cypress": "^13.15.1",
-    "i18next": "^23.16.4",
+    "cypress": "^14.0.3",
+    "i18next": "^24.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-github-btn": "^1.4.0",
-    "react-i18next": "^15.1.0",
+    "react-i18next": "^15.4.0",
     "react-icons": "^5.3.0",
     "sass": "^1.81.0",
-    "typescript": "^5.6.3",
+    "typescript": "^5.7.3",
     "web-vitals": "^4.2.4",
     "yarn": "^1.22.22"
   },
@@ -51,10 +51,10 @@
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@simonsmith/cypress-image-snapshot": "^9.1.0",
-    "@vitejs/plugin-react": "^4.3.3",
-    "tailwindcss": "^3.4.14",
-    "vite": "^5.4.10",
+    "@vitejs/plugin-react": "^4.3.4",
+    "tailwindcss": "^3.4.17",
+    "vite": "^6.2.0",
     "vite-plugin-svgr": "^4.3.0",
-    "vite-tsconfig-paths": "^5.0.1"
+    "vite-tsconfig-paths": "^5.1.4"
   }
 }
