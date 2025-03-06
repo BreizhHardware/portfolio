@@ -14,11 +14,11 @@ const Felix = {
     skills: [
         {
             skillName: "C",
-            skillLevel: 80,
+            skillLevel: 85,
         },
         {
             skillName: "C++",
-            skillLevel: 75,
+            skillLevel: 80,
         },
         {
             skillName: "Admin Système",
@@ -26,7 +26,7 @@ const Felix = {
         },
         {
             skillName: "Python",
-            skillLevel: 75,
+            skillLevel: 80,
         },
         {
             skillName: "PHP",
@@ -42,7 +42,7 @@ const Felix = {
         },
         {
             skillName: "Linux",
-            skillLevel: 75,
+            skillLevel: 80,
         },
         {
             skillName: "Go",
@@ -58,7 +58,7 @@ const Felix = {
         },
         {
             skillName: "React",
-            skillLevel: 70,
+            skillLevel: 80,
         }
     ],
     projects: [
