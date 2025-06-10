@@ -11,7 +11,7 @@
     "browserslist-useragent": "^4.0.0",
     "cypress": "^14.4.1",
     "i18next": "^24.2.2",
-    "react": "^18.2.0",
+    "react": "^19.1.0",
     "react-dom": "^18.2.0",
     "react-github-btn": "^1.4.0",
     "react-i18next": "^15.5.1",
