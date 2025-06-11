@@ -8,7 +8,7 @@ i18n
             fr: {
                 translation: {
                     "about.title": "A propos de moi",
-                    "about.description": "Je suis étudiant en 3e année à l'ISEN Nantes en alternance chez Horoquartz. Je suis passionné par l'informatique. J'ai appris à coder en autodidacte et je suis actuellement en train d'apprendre le Rust et le Go. Je suis également passionné par l'électronique et le hardware. Je possède un homelab composé de 3 serveur, un DELL T320, un DELL T330 et un Dell Precision T3610 les 3 sous proxmox.",
+                    "about.description": "Je suis étudiant en 3e année à l'ISEN Nantes en alternance chez Horoquartz. Je suis passionné par l'informatique. J'ai appris à coder en autodidacte et je suis actuellement en train d'apprendre le Rust et le Go. Je suis également passionné par l'électronique et le hardware. Je possède un homelab composé de 3 serveurs, un DELL T320, un DELL T330 et un Dell Precision T3610 les 3 sous proxmox.",
                     "card.title": "Etudiant en 3e année a l'ISEN Nantes en alternance chez Horoquartz",
                     "projects.title": "Mes projets",
                     "projects.Front end starter.description": "Mon starter personnel pour projet front end",
