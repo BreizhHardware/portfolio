@@ -54,7 +54,7 @@ const Felix = {
         },
         {
             skillName: "Rust",
-            skillLevel: 50,
+            skillLevel: 65,
         },
         {
             skillName: "React",

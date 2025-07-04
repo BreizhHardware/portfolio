@@ -47,7 +47,7 @@ i18n
                     "skills.examples.Docker.title": "Containerisation",
                     "skills.examples.Docker.description": "Déploiement de conteneurs, configuration Docker Compose, création d'images, déploiement de services en haute disponibilité via Swarm et Kubernetes",
                     "skills.examples.Rust.title": "Projets Rust",
-                    "skills.examples.Rust.description": "Apprentissage du langage, création d'une api REST avec Ntex",
+                    "skills.examples.Rust.description": "Apprentissage du langage, création d'une api REST avec Ntex, récriture de l'api github NTFY en Rust",
                     "skills.examples.React.title": "Développement React",
                     "skills.examples.React.description": "Ce portfolio, site web de Modelec, application mobile ISEN Orbit, projets professionnels",
                 },
@@ -94,7 +94,7 @@ i18n
                     "skills.examples.Docker.title": "Containerization",
                     "skills.examples.Docker.description": "Container deployment, Docker Compose configuration, image creation, high-availability service deployment via Swarm and Kubernetes.",
                     "skills.examples.Rust.title": "Rust Projects",
-                    "skills.examples.Rust.description": "Learning the language, creation of a REST API with Ntex.",
+                    "skills.examples.Rust.description": "Learning the language, creation of a REST API with Ntex, rewrit of the GitHub NTFY API in Rust.",
                     "skills.examples.React.title": "React Development",
                     "skills.examples.React.description": "This portfolio, Modelec website, ISEN Orbit mobile application, professional projects."
                 },
