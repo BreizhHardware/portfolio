@@ -95,7 +95,7 @@ const Felix = {
         {
             title: "Github NTFY",
             description: "Projet de notification pour les releases github et dockerhub qui envoie des notifications sur ntfy, gotify et discord",
-            tags: ["Python", "Docker", "Github Actions"],
+            tags: ["Python", "Rust", "Nuxt", "Docker", "Github Actions"],
             link: "https://github.com/BreizhHardware/ntfy_alerts"
         },
         {
@@ -103,6 +103,12 @@ const Felix = {
             description: "Projet de jeu de simulation de comportement de banc de poisson en C++ avec la librairie SLD2, avec support du multijoueur.",
             tags: ["C++", "SDL2", "Multiplayer"],
             link: "https://github.com/BreizhHardware/bloubloulespoissons"
+        },
+        {
+            title: "Alternance Horoquartz",
+            description: "Développement d'un système de mise à jour pour les produits Horoquartz",
+            tags: ["Node.js", "Go", "PostgreSQL", "Docker", "Kubernetes", "Azure"],
+            link: "https://www.horoquartz.com/"
         }
     ]
 };
