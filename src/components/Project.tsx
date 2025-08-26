@@ -1,11 +1,18 @@
-// @ts-ignore
-import React from 'react';
-// @ts-ignore
-import ProjectCard from "./ProjectCard.tsx";
+import ProjectCard from "./ProjectCard";
 import {useTranslation} from "react-i18next";
 
-// @ts-ignore
-function Projects({projects}) {
+type Project = {
+    title: string;
+    description: string;
+    tags: string[];
+    link: string;
+};
+
+interface ProjectsProps {
+    projects: Project[];
+}
+
+function Projects({projects}: ProjectsProps) {
     const { t } = useTranslation();
     return(
         <div>

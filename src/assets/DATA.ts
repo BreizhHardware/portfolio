@@ -61,6 +61,74 @@ const Felix = {
             skillLevel: 80,
         }
     ],
+    experience: [
+        {
+            id: 1,
+            type: 'work',
+            title: 'Développeur - Alternant',
+            organization: 'Horoquartz',
+            location: 'Saint-Herblain, France',
+            startDate: '2024',
+            endDate: 'Present',
+            current: true,
+            description: [
+                'Développement d\'un système de mise à jour pour les produits Horoquartz',
+                'Conception et implémentation d\'APIs REST avec Node.js et Go',
+                'Gestion des bases de données PostgreSQL',
+                'Déploiement avec Docker et Kubernetes sur Azure'
+            ],
+            technologies: ['Node.js', 'Go', 'PostgreSQL', 'Docker', 'Kubernetes', 'Azure']
+        },
+        {
+              id: 2,
+              type: 'education',
+              title: 'ISEN Nantes - Cycle Ingénieur',
+              organization: 'Institut Supérieur de l\'Électronique et du Numérique',
+              location: 'Nantes, France',
+              startDate: '2022',
+              endDate: '2027',
+              current: true,
+              description: [
+                'Formation d\'ingénieur en informatique et nouvelles technologies',
+                'Spécialisation en cybersécurité',
+                'Projets en équipe et gestion de projet'
+              ],
+              technologies: ['C', 'C++', 'Python', 'Linux', 'Réseaux']
+            },
+            {
+                id: 3,
+                type: 'work',
+                title: 'Support Technique & Admin VPS',
+                organization: 'MercuryCloud',
+                location: 'Remote',
+                startDate: '2023',
+                endDate: 'Present',
+                current: true,
+                description: [
+                    'Support technique pour serveurs de jeu et VPS',
+                    'Administration des services CPanel et Plesk',
+                    'Gestion du système WHMCS pour la facturation',
+                    'Virtualisation et maintenance des serveurs Linux'
+                ],
+                technologies: ['Linux', 'Virtualisation', 'CPanel', 'Plesk', 'WHMCS']
+            },
+            {
+                id: 4,
+                type: 'achievement',
+                title: 'Projet Robot - Coupe de France de Robotique',
+                organization: 'Club Modelec ISEN',
+                location: 'Nantes, France',
+                startDate: '2023',
+                endDate: '2023',
+                description: [
+                    'Développement du système de contrôle du robot',
+                    'Interface utilisateur avec QT',
+                    'Déploiement sur Raspberry Pi',
+                    'Travail en équipe multidisciplinaire'
+                ],
+                technologies: ['C++', 'QT', 'Raspberry Pi', 'Linux']
+            },
+    ],
     projects: [
         {
             title: "Front end starter",
@@ -95,7 +163,7 @@ const Felix = {
         {
             title: "Github NTFY",
             description: "Projet de notification pour les releases github et dockerhub qui envoie des notifications sur ntfy, gotify et discord",
-            tags: ["Python", "Docker", "Github Actions"],
+            tags: ["Python", "Rust", "Nuxt", "Docker", "Github Actions"],
             link: "https://github.com/BreizhHardware/ntfy_alerts"
         },
         {
@@ -103,6 +171,12 @@ const Felix = {
             description: "Projet de jeu de simulation de comportement de banc de poisson en C++ avec la librairie SLD2, avec support du multijoueur.",
             tags: ["C++", "SDL2", "Multiplayer"],
             link: "https://github.com/BreizhHardware/bloubloulespoissons"
+        },
+        {
+            title: "Alternance Horoquartz",
+            description: "Développement d'un système de mise à jour pour les produits Horoquartz",
+            tags: ["Node.js", "Go", "PostgreSQL", "Docker", "Kubernetes", "Azure"],
+            link: "https://www.horoquartz.com/"
         }
     ]
 };

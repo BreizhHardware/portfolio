@@ -62,7 +62,7 @@ const SkillLevel: React.FC<SkillLevelProps> = ({ level, skillName }) => {
     };
 
     return (
-        <div className="mt-2">
+        <div className="mt-2 relative">
             <div
                 ref={badgeRef}
                 className="inline-block px-3 py-1 rounded-full text-sm font-medium bg-gray-200 text-gray-800 border cursor-pointer dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700"
@@ -76,11 +76,7 @@ const SkillLevel: React.FC<SkillLevelProps> = ({ level, skillName }) => {
             {showTooltip && (
                 <div
                     ref={tooltipRef}
-                    className="fixed z-50 w-64 p-3 text-sm bg-gray-200 rounded-xl border-2 border-gray-300 dark:border-gray-700 hover:shadow-lg dark:bg-gray-800 dark:text-gray-200 transition-shadow"
-                    style={{
-                        top: `${tooltipPosition.top}px`,
-                        left: `${tooltipPosition.left}px`,
-                    }}
+                    className="absolute left-1/2 -translate-x-1/2 top-full mt-2 z-50 w-64 p-3 text-sm bg-gray-200 rounded-xl border-2 border-gray-300 dark:border-gray-700 hover:shadow-lg dark:bg-gray-800 dark:text-gray-200 transition-shadow"
                 >
                     <p className="font-bold mb-1">{t(`skills.examples.${skillName}.title`)}</p>
                     <p>{t(`skills.examples.${skillName}.description`)}</p>

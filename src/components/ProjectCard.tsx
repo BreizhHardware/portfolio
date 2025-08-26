@@ -33,7 +33,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                     <div className="px-4 py-1 border-2 rounded-full dark:text-gray-300">{tag}</div>
                 ))}
             </div>
-            {title !== "MercuryCloud" && (
+            {(title !== "MercuryCloud" && title !== "Alternance Horoquartz") && (
             <div className="w-full text-center">
                 <GitHubButton href={link} data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star ntkme/github-buttons on GitHub">Star</GitHubButton>
                 {" "}
