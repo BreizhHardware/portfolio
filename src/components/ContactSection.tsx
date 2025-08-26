@@ -34,11 +34,21 @@ const ContactSection: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-  setStatus({ type: 'loading' });
+    setStatus({ type: 'loading' });
 
     const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
     const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const userId = import.meta.env.VITE_EMAILJS_USER_ID;
 
+    if (!serviceId || !templateId || !userId) {
+      console.error('Missing required EmailJS environment variables:', {
+        VITE_EMAILJS_SERVICE_ID: serviceId,
+        VITE_EMAILJS_TEMPLATE_ID: templateId,
+        VITE_EMAILJS_USER_ID: userId
+      });
+      setStatus({ type: 'error' });
+      return;
+    }
     const templateParams = {
       name: formData.name,
       email: formData.email,
