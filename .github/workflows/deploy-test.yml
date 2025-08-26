@@ -33,6 +33,9 @@ jobs:
           pnpm install --frozen-lockfile
           pnpm run build
 
+      - name: Install Cypress binary
+        run: pnpx cypress install
+
       - name: Install http-server
         run: pnpm add -D http-server
 
