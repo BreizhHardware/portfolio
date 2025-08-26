@@ -49,4 +49,3 @@ dist
 /cypress/fixtures/__tests__/require-vanilla-test.js
 /src/components/SkillCard.js
 /src/components/Skills.js
-.env
