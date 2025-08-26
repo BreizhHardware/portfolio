@@ -57,7 +57,13 @@ const ContactSection: React.FC = () => {
     };
 
     try {
-      await emailjs.init({publicKey: import.meta.env.VITE_EMAILJS_USER_ID});
+      const publicKey = import.meta.env.VITE_EMAILJS_USER_ID;
+      if (!publicKey) {
+        console.error('EmailJS Error: VITE_EMAILJS_USER_ID is not defined.');
+        setStatus({ type: 'error' });
+        return;
+      }
+      await emailjs.init({ publicKey });
       await emailjs.send(serviceId, templateId, templateParams);
       setStatus({
         type: 'success'
