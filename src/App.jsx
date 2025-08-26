@@ -12,7 +12,6 @@ import CV from "./components/CV.tsx";
 import Menu from "./components/Menu.tsx";
 import LoadingScreen from "./components/LoadingScreen.tsx";
 import ParticlesBackground from "./components/ParticlesBackground.tsx";
-import HomelabSection from "./components/HomelabSection.tsx";
 import GitHubStatsSection from "./components/GitHubStatsSection.tsx";
 import ContactSection from "./components/ContactSection.tsx";
 import TimelineSection from "./components/TimelineSection.tsx";
@@ -71,9 +70,7 @@ function App() {
                     <About />
                     <Skills skills={data.skills} />
                     <hr className="text-gray-800 dark:text-gray-200 mt-4" id="experience" />
-                    <TimelineSection />
-                    <hr className="text-gray-800 dark:text-gray-200 mt-4" id="homelab" />
-                    <HomelabSection />
+                    <TimelineSection experience={data.experience} />
                     <hr className="text-gray-800 dark:text-gray-200 mt-4" id="github" />
                     <GitHubStatsSection />
                     <hr className="text-gray-800 dark:text-gray-200 mt-4" id="projects" />

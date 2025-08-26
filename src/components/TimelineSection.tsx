@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { FaBriefcase, FaGraduationCap, FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa';
 
 interface TimelineItem {
@@ -14,90 +15,8 @@ interface TimelineItem {
   current?: boolean;
 }
 
-const TimelineSection: React.FC = () => {
-  const timelineData: TimelineItem[] = [
-    {
-      id: 1,
-      type: 'work',
-      title: 'Développeur - Alternant',
-      organization: 'Horoquartz',
-      location: 'Cesson-Sévigné, France',
-      startDate: '2024',
-      endDate: 'Présent',
-      current: true,
-      description: [
-        'Développement d\'un système de mise à jour pour les produits Horoquartz',
-        'Conception et implémentation d\'APIs REST avec Node.js et Go',
-        'Gestion des bases de données PostgreSQL',
-        'Déploiement avec Docker et Kubernetes sur Azure'
-      ],
-      technologies: ['Node.js', 'Go', 'PostgreSQL', 'Docker', 'Kubernetes', 'Azure']
-    },
-    {
-      id: 2,
-      type: 'education',
-      title: 'ISEN Nantes - Cycle Ingénieur',
-      organization: 'Institut Supérieur de l\'Électronique et du Numérique',
-      location: 'Nantes, France',
-      startDate: '2022',
-      endDate: '2025',
-      current: true,
-      description: [
-        'Formation d\'ingénieur en informatique et nouvelles technologies',
-        'Spécialisation en développement logiciel et administration système',
-        'Projets en équipe et gestion de projet'
-      ],
-      technologies: ['C', 'C++', 'Python', 'Linux', 'Réseaux']
-    },
-    {
-      id: 3,
-      type: 'work',
-      title: 'Support Technique & Admin VPS',
-      organization: 'MercuryCloud',
-      location: 'Remote',
-      startDate: '2021',
-      endDate: '2024',
-      description: [
-        'Support technique pour serveurs de jeu et VPS',
-        'Administration des services CPanel et Plesk',
-        'Gestion du système WHMCS pour la facturation',
-        'Virtualisation et maintenance des serveurs Linux'
-      ],
-      technologies: ['Linux', 'Virtualisation', 'CPanel', 'Plesk', 'WHMCS']
-    },
-    {
-      id: 4,
-      type: 'achievement',
-      title: 'Projet Robot - Coupe de France de Robotique',
-      organization: 'Club Modelec ISEN',
-      location: 'Nantes, France',
-      startDate: '2023',
-      endDate: '2023',
-      description: [
-        'Développement du système de contrôle du robot',
-        'Interface utilisateur avec QT',
-        'Déploiement sur Raspberry Pi',
-        'Travail en équipe multidisciplinaire'
-      ],
-      technologies: ['C++', 'QT', 'Raspberry Pi', 'Linux']
-    },
-    {
-      id: 5,
-      type: 'education',
-      title: 'Classes Préparatoires Intégrées',
-      organization: 'ISEN Nantes',
-      location: 'Nantes, France',
-      startDate: '2020',
-      endDate: '2022',
-      description: [
-        'Mathématiques, Physique, Informatique',
-        'Bases de la programmation en C',
-        'Introduction aux systèmes embarqués'
-      ],
-      technologies: ['C', 'Mathématiques', 'Physique', 'Électronique']
-    }
-  ];
-
+const TimelineSection: React.FC<{ experience: TimelineItem[] }> = ({ experience }) => {
+  const { t } = useTranslation();
   const getIcon = (type: string) => {
     switch (type) {
       case 'work':
@@ -140,7 +59,7 @@ const TimelineSection: React.FC = () => {
         <div className="absolute left-4 md:left-8 top-0 bottom-0 w-0.5 bg-gray-300 dark:bg-gray-600"></div>
 
         <div className="space-y-8">
-          {timelineData.map((item, index) => (
+          {experience.map((item, index) => (
             <div
               key={item.id}
               className={`relative pl-12 md:pl-20 animate-fadeInUp`}

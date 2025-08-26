@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@tailwindcss/cli": "^4.1.12",
+    "@tailwindcss/vite": "^4.1.12",
     "@testing-library/jest-dom": "^6.6.4",
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^14.6.1",
@@ -20,6 +22,7 @@
     "react-icons": "^5.5.0",
     "react-particles": "^2.12.2",
     "sass": "^1.86.0",
+    "tailwindcss": "^4.1.12",
     "tsparticles-slim": "^2.12.0",
     "typescript": "^5.8.3",
     "web-vitals": "^5.1.0",
@@ -29,7 +32,7 @@
     "start": "vite",
     "build": "npx tsc && vite build",
     "serve": "vite preview",
-    "build:css": "tailwindcss build -i src/index.css -o src/output.css",
+    "build:css": "npx @tailwindcss/cli -i src/index.css -o src/output.css",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
     "test": "browserslist && cypress run"
@@ -56,6 +59,7 @@
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@simonsmith/cypress-image-snapshot": "^10.0.2",
     "@vitejs/plugin-react": "^4.6.0",
+    "prettier": "^3.6.2",
     "vite": "^7.0.6",
     "vite-plugin-svgr": "^4.3.0",
     "vite-tsconfig-paths": "^5.1.4"
