@@ -10,7 +10,6 @@ function Menu() {
                 <li><a href="#top" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">Félix MARQUET</a></li>
                 <li><a href="#about" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">{t('nav.about')}</a></li>
                 <li><a href="#experience" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">Expérience</a></li>
-                <li><a href="#homelab" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">Homelab</a></li>
                 <li><a href="#projects" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">{t('nav.projects')}</a></li>
                 <li><a href="#contact" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">Contact</a></li>
                 <li><a href="#cv" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">{t('nav.cv')}</a></li>

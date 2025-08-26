@@ -1,112 +1,19 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
+import HttpBackend from "i18next-http-backend";
 
 i18n
-    .use(initReactI18next)
-    .init({
-        resources: {
-            fr: {
-                translation: {
-                    "about.title": "A propos de moi",
-                    "about.description": "Je suis étudiant en 4e année à l'ISEN Nantes en alternance chez Horoquartz. Je suis passionné par l'informatique. J'ai appris à coder en autodidacte et je suis actuellement en train d'apprendre le Rust et le Go. Je suis également passionné par l'électronique et le hardware. Je possède un homelab composé de 3serveur, un DELL T320, un DELL T330 et un Dell Precision T3610 les 3 sous proxmox.",
-                    "card.title": "Etudiant en 4e année a l'ISEN Nantes en alternance chez Horoquartz",
-                    "projects.title": "Mes projets",
-                    "projects.Front end starter.description": "Mon starter personnel pour projet front end",
-                    "projects.Project C - ISEN CIR 1.description": "Projet de fin de 1ere année à l'ISEN Nantes",
-                    "projects.Projet robot.description": "Projet de robot avec le club Modelec ISEN pour la coupe de france de robotique (Developpement et déploiment sur Raspberry Pi)",
-                    "projects.MercuryCloud.description": "Projet d'herbergeur de serveur de jeu et VPS. Poste de support technique, administrateur des service VPS, Game et web.",
-                    "projects.Projet C++ - ISEN CIR 2.description": "Projet de fin de 4e semestre à l'ISEN Nantes. Création d'un jeu de type Tower Defense en C++ avec la librairie QT6.",
-                    "projects.Github NTFY.description": "Projet de notification pour les releases github et dockerhub qui envoie des notifications sur ntfy, gotify et discord.",
-                    "projects.Projet C++ - ISEN CIPA 3.description": "Projet de jeu de simulation de comportement de banc de poisson en C++ avec la librairie SLD2, avec support du multijoueur.",
-                    "projects.Alternance Horoquartz.description": "Développement d'un système de mise à jour pour les produits Horoquartz.",
-                    "cv.title": "Mon CV",
-                    "cv.path": "/CV-Felix-MARQUET.pdf",
-                    "nav.about": "A propos de moi",
-                    "nav.projects": "Mes projets",
-                    "nav.cv": "Mon CV",
-                    "skills.beginner": "Débutant",
-                    "skills.intermediate": "Intermédiaire",
-                    "skills.expert": "Expert",
-                    "skills.examples.C.title": "Projets C",
-                    "skills.examples.C.description": "Projet de fin de 1ère année à l'ISEN, algorithmes de base, création d'une api REST",
-                    "skills.examples.C++.title": "Projets C++",
-                    "skills.examples.C++.description": "Tower Defense en Qt6, simulation de banc de poissons avec SDL2 avec support du multijoueur, algorithmes de base",
-                    "skills.examples.Admin Système.title": "Administration Système",
-                    "skills.examples.Admin Système.description": "Configuration de 3 serveurs DELL sous Proxmox, virtualisation, maintenance des machines virtuelles, deploiement d'applications dans Azure",
-                    "skills.examples.Python.title": "Projets Python",
-                    "skills.examples.Python.description": "Github NTFY pour les notifications des releases github et dockerhub, projets de cours",
-                    "skills.examples.PHP.title": "Projets PHP",
-                    "skills.examples.PHP.description": "Développements web avec PHP, AJAX, postgreSQL",
-                    "skills.examples.HTML/CSS.title": "Développement Front-end",
-                    "skills.examples.HTML/CSS.description": "Front-end starter personnalisé, projet de base, divers projets web",
-                    "skills.examples.JS/TS.title": "JavaScript/TypeScript",
-                    "skills.examples.JS/TS.description": "Développement React, ce portfolio, api NodeJS avec Express, Création d'une application mobile Studysen avec React Native, projets professionnels",
-                    "skills.examples.Linux.title": "Administration Linux",
-                    "skills.examples.Linux.description": "Configuration de serveurs, administration système, Ansible playbooks",
-                    "skills.examples.Go.title": "Projets Go",
-                    "skills.examples.Go.description": "Initiation au langage, Création d'une api REST avec Fiber, Go Gin et la librairie standard, projets professionnels",
-                    "skills.examples.Docker.title": "Containerisation",
-                    "skills.examples.Docker.description": "Déploiement de conteneurs, configuration Docker Compose, création d'images, déploiement de services en haute disponibilité via Swarm et Kubernetes",
-                    "skills.examples.Rust.title": "Projets Rust",
-                    "skills.examples.Rust.description": "Apprentissage du langage, création d'une api REST avec Ntex, récriture de l'api github NTFY en Rust",
-                    "skills.examples.React.title": "Développement React",
-                    "skills.examples.React.description": "Ce portfolio, site web de Modelec, application mobile Studysen, projets professionnels",
-                },
-            },
-            en: {
-                translation: {
-                    "cv.title": "My CV",
-                    "about.title": "About me",
-                    "about.description": "I am a fourth-year student at ISEN Nantes, currently in a work-study program at Horoquartz. I am passionate about computer science. I learned to code on my own and am currently learning Rust and Go. I am also passionate about electronics and hardware. I have a homelab consisting of 3 servers: a DELL T320, a DELL T330, and a Dell Precision T3610, all running Proxmox.",
-                    "card.title": "Fourth year student at ISEN Nantes in work-study program at Horoquartz",
-                    "projects.title": "My projects",
-                    "projects.Front end starter.description": "My personal starter for front end projects",
-                    "projects.Project C - ISEN CIR 1.description": "End of 1st year project at ISEN Nantes",
-                    "projects.Projet robot.description": "Robot project with the Modelec ISEN club for the French robotics cup (Development and deployment on Raspberry Pi)",
-                    "projects.MercuryCloud.description": "Game server and VPS hosting project. Technical support position, administrator of VPS, Game and web services.",
-                    "projects.Projet C++ - ISEN CIR 2.description": "End of 4th semester project at ISEN Nantes. Creation of a Tower Defense type game in C++ with the QT6 library.",
-                    "projects.Github NTFY.description": "Notification project for github and dockerhub releases that sends notifications on ntfy, gotify and discord.",
-                    "projects.Projet C++ - ISEN CIPA 3.description": "Fish school behavior simulation game project in C++ with the SLD2 library, with multiplayer support.",
-                    "projects.Alternance Horoquartz.description": "Development of an update system for Horoquartz products.",
-                    "nav.about": "About me",
-                    "nav.projects": "My projects",
-                    "nav.cv": "My resume",
-                    "cv.path": "/CV-Felix-MARQUET-English.pdf",
-                    "skills.beginner": "Beginner",
-                    "skills.intermediate": "Intermediate",
-                    "skills.expert": "Expert",
-                    "skills.examples.C.title": "C Projects",
-                    "skills.examples.C.description": "End-of-first-year project at ISEN, basic algorithms, creation of a REST API.",
-                    "skills.examples.C++.title": "C++ Projects",
-                    "skills.examples.C++.description": "Tower Defense in Qt6, fish school simulation with SDL2 featuring multiplayer support, basic algorithms.",
-                    "skills.examples.Admin Système.title": "System Administration",
-                    "skills.examples.Admin Système.description": "Configuration of 3 DELL servers under Proxmox, virtualization, maintenance of virtual machines, deployment of applications in Azure.",
-                    "skills.examples.Python.title": "Python Projects",
-                    "skills.examples.Python.description": "GitHub NTFY for GitHub and DockerHub release notifications, course projects.",
-                    "skills.examples.PHP.title": "PHP Projects",
-                    "skills.examples.PHP.description": "Web development with PHP, AJAX, PostgreSQL.",
-                    "skills.examples.HTML/CSS.title": "Front-end development",
-                    "skills.examples.HTML/CSS.description": "Custom front-end starter, base project, various web projects.",
-                    "skills.examples.JS/TS.title": "JavaScript/TypeScript",
-                    "skills.examples.JS/TS.description": "React development, this portfolio, NodeJS API with Express, creation of the studysen mobile application with React Native, professional projects.",
-                    "skills.examples.Linux.title": "Linux Administration",
-                    "skills.examples.Linux.description": "Server configuration, system administration, Ansible playbooks.",
-                    "skills.examples.Go.title": "Go Projects",
-                    "skills.examples.Go.description": "Introduction to the language, creation of a REST API with Fiber, Go Gin, and the standard library, professional projects.",
-                    "skills.examples.Docker.title": "Containerization",
-                    "skills.examples.Docker.description": "Container deployment, Docker Compose configuration, image creation, high-availability service deployment via Swarm and Kubernetes.",
-                    "skills.examples.Rust.title": "Rust Projects",
-                    "skills.examples.Rust.description": "Learning the language, creation of a REST API with Ntex, rewrit of the GitHub NTFY API in Rust.",
-                    "skills.examples.React.title": "React Development",
-                    "skills.examples.React.description": "This portfolio, Modelec website, Studysen mobile application, professional projects."
-                },
-            },
-        },
-        lng: navigator.language.startsWith('fr') ? 'fr' : 'en',
-        fallbackLng: "en",
-        interpolation: {
-            escapeValue: false
-        },
-    });
+  .use(HttpBackend)
+  .use(initReactI18next)
+  .init({
+    lng: navigator.language.startsWith('fr') ? 'fr' : 'en',
+    fallbackLng: "en",
+    interpolation: {
+      escapeValue: false
+    },
+    backend: {
+      loadPath: "/locales/{{lng}}/translation.json"
+    }
+  });
 
 export default i18n;

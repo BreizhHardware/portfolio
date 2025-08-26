@@ -12,7 +12,6 @@ import CV from "./components/CV.tsx";
 import Menu from "./components/Menu.tsx";
 import LoadingScreen from "./components/LoadingScreen.tsx";
 import ParticlesBackground from "./components/ParticlesBackground.tsx";
-import GitHubStatsSection from "./components/GitHubStatsSection.tsx";
 import ContactSection from "./components/ContactSection.tsx";
 import TimelineSection from "./components/TimelineSection.tsx";
 import data from "./assets/DATA.ts";
@@ -21,23 +20,32 @@ import i18n from './i18n.js';
 import {createRoot} from "react-dom/client";
 
 function App() {
-    const [theme, setTheme] = useState("light");
+    // Initialise le thème depuis localStorage ou détecte le thème système
+    const [theme, setTheme] = useState(() => {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+            return savedTheme;
+        }
+        // Détecte le thème système si aucun thème sauvegardé
+        const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        return userPrefersDark ? "dark" : "light";
+    });
     const [isLoading, setIsLoading] = useState(true);
     const [showContent, setShowContent] = useState(false);
 
     useEffect(() => {
-        // Detect if the user has their system in dark mode
-        const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-        if (userPrefersDark) {
-            setTheme("dark");
-            document.documentElement.classList.add("dark");
+        // Synchronise la classe 'dark' avec l'état 'theme' et sauvegarde dans localStorage
+        const html = document.documentElement;
+        if (theme === "dark") {
+            html.classList.add("dark");
+        } else {
+            html.classList.remove("dark");
         }
-    }, []);
+        localStorage.setItem("theme", theme);
+    }, [theme]);
 
     const toggleTheme = () => {
         setTheme(theme === "light" ? "dark" : "light");
-        document.documentElement.classList.toggle("dark");
     }
 
     const handleLoadingComplete = () => {
@@ -71,8 +79,6 @@ function App() {
                     <Skills skills={data.skills} />
                     <hr className="text-gray-800 dark:text-gray-200 mt-4" id="experience" />
                     <TimelineSection experience={data.experience} />
-                    <hr className="text-gray-800 dark:text-gray-200 mt-4" id="github" />
-                    <GitHubStatsSection />
                     <hr className="text-gray-800 dark:text-gray-200 mt-4" id="projects" />
                     <Project projects={data.projects} />
                     <hr className="text-gray-800 dark:text-gray-200 mt-4" id="contact" />

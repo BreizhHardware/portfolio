@@ -47,10 +47,10 @@ const TimelineSection: React.FC<{ experience: TimelineItem[] }> = ({ experience 
     <div className="max-w-4xl mx-auto mt-16" id="experience">
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-gray-200 mb-4">
-          🎯 Parcours & Expérience
+          {t('experience.title')}
         </h2>
         <p className="text-lg text-gray-600 dark:text-gray-400">
-          Mon évolution professionnelle et académique
+          {t('experience.description')}
         </p>
       </div>
 
@@ -73,39 +73,39 @@ const TimelineSection: React.FC<{ experience: TimelineItem[] }> = ({ experience 
               </div>
 
               {/* Contenu */}
-              <div className={`bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg card-hover border-l-4 ${getBackgroundColor(item.type)}`}>
+              <div className={`bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg card-hover border-l-4 ${getBackgroundColor(item.type)}`}> 
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                   <h3 className="text-xl font-bold text-gray-800 dark:text-gray-200">
-                    {item.title}
+                    {t(`experience.items.${index}.title`)}
                   </h3>
                   <div className="flex items-center space-x-4 text-sm text-gray-600 dark:text-gray-400 mt-2 md:mt-0">
                     {item.current && (
                       <span className="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-xs">
-                        En cours
+                        {t('experience.current')}
                       </span>
                     )}
                     <span className="flex items-center space-x-1">
                       <FaCalendarAlt className="text-xs" />
-                      <span>{item.startDate} - {item.endDate}</span>
+                      <span>{t(`experience.items.${index}.startDate`)} - {t(`experience.items.${index}.endDate`)}</span>
                     </span>
                   </div>
                 </div>
 
                 <div className="flex items-center space-x-2 mb-3">
                   <h4 className="text-lg font-semibold text-gray-700 dark:text-gray-300">
-                    {item.organization}
+                    {t(`experience.items.${index}.organization`)}
                   </h4>
                   <span className="flex items-center text-sm text-gray-500 dark:text-gray-400">
                     <FaMapMarkerAlt className="mr-1" />
-                    {item.location}
+                    {t(`experience.items.${index}.location`)}
                   </span>
                 </div>
 
                 <ul className="space-y-1 mb-4">
-                  {item.description.map((desc, idx) => (
+                  {item.description.map((_, idx) => (
                     <li key={idx} className="text-gray-600 dark:text-gray-400 flex items-start">
                       <span className="text-blue-500 mr-2 mt-1.5">•</span>
-                      <span>{desc}</span>
+                      <span>{t(`experience.items.${index}.description.${idx}`)}</span>
                     </li>
                   ))}
                 </ul>
@@ -113,15 +113,15 @@ const TimelineSection: React.FC<{ experience: TimelineItem[] }> = ({ experience 
                 {item.technologies && (
                   <div>
                     <h5 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                      Technologies utilisées :
+                      {t('experience.technologies')}
                     </h5>
                     <div className="flex flex-wrap gap-2">
-                      {item.technologies.map((tech, idx) => (
+                      {item.technologies.map((_, idx) => (
                         <span
                           key={idx}
                           className="px-3 py-1 text-xs bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full"
                         >
-                          {tech}
+                          {t(`experience.items.${index}.technologies.${idx}`)}
                         </span>
                       ))}
                     </div>
