@@ -22,7 +22,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         <div className="group w-full sm:w-5/12 m-4 mx-auto p-6 rounded-xl border-2 border-gray-300 dark:border-gray-700">
             <a href={link}>
                 <h1 className="text-xl text-center font-bold dark:text-gray-200">
-                    {title}{" "}
+                    {t(`projects.${project.title}.title`)}{" "}
                     <FaExternalLinkAlt className="inline align-baseline" />
                 </h1>
             </a>

@@ -8,14 +8,38 @@
   },
   "projects": {
     "title": "My projects",
-    "Front end starter.description": "My personal starter for front end projects",
-    "Project C - ISEN CIR 1.description": "End of 1st year project at ISEN Nantes",
-    "Projet robot.description": "Robot project with the Modelec ISEN club for the French robotics cup (Development and deployment on Raspberry Pi)",
-    "MercuryCloud.description": "Game server and VPS hosting project. Technical support position, administrator of VPS, Game and web services.",
-    "Projet C++ - ISEN CIR 2.description": "End of 4th semester project at ISEN Nantes. Creation of a Tower Defense type game in C++ with the QT6 library.",
-    "Github NTFY.description": "Notification project for github and dockerhub releases that sends notifications on ntfy, gotify and discord.",
-    "Projet C++ - ISEN CIPA 3.description": "Fish school behavior simulation game project in C++ with the SLD2 library, with multiplayer support.",
-    "Alternance Horoquartz.description": "Development of an update system for Horoquartz products."
+    "Front end starter": {
+        "title": "Front end starter",
+        "description": "My personal starter for front end projects"
+    },
+    "Project C - ISEN CIR 1": {
+      "title": "C Project - ISEN CIR 1",
+      "description": "End of 1st year project at ISEN Nantes"
+    },
+    "Projet robot": {
+      "title": "Robot Project",
+      "description": "Robot project with the Modelec ISEN club for the French robotics cup (Development and deployment on Raspberry Pi)"
+    },
+    "MercuryCloud": {
+      "title": "MercuryCloud",
+      "description": "Game server and VPS hosting project. Technical support position, administrator of VPS, Game and web services."
+    },
+    "Projet C++ - ISEN CIR 2": {
+      "title": "C++ Project - ISEN CIR 2",
+      "description": "End of 4th semester project at ISEN Nantes. Development of a Tower Defense type game in C++ with the QT6 library."
+    },
+    "Github NTFY": {
+      "title": "Github NTFY",
+      "description": "Notification project for github and dockerhub releases that sends notifications on ntfy, gotify and discord."
+    },
+    "Projet C++ - ISEN CIPA 3": {
+      "title": "C++ Project - ISEN CIPA 3",
+      "description": "Fish school behavior simulation game project in C++ with the SLD2 library, with multiplayer support."
+    },
+    "Alternance Horoquartz": {
+      "title": "Horoquartz Work-study",
+      "description": "Development of an update system for Horoquartz products."
+    }
   },
   "cv": {
     "title": "My resume",

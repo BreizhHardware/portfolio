@@ -16,7 +16,7 @@ import ContactSection from "./components/ContactSection";
 import TimelineSection from "./components/TimelineSection";
 import data from "./assets/DATA";
 import { useTranslation } from "react-i18next";
-import i18n from './i18n.js';
+import i18n from './i18n';
 import {createRoot} from "react-dom/client";
 import GitHubStatsSection from 'components/GitHubStatsSection';
 

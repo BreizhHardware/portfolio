@@ -1,21 +1,45 @@
 {
   "about": {
     "title": "A propos de moi",
-    "description": "Je suis étudiant en 4e année à l'ISEN Nantes en alternance chez Horoquartz. Je suis passionné par l'informatique. J'ai appris à coder en autodidacte et je suis actuellement en train d'apprendre le Rust et le Go. Je suis également passionné par l'électronique et le hardware. Je possède un homelab composé de 3 serveur, un DELL T320, un DELL T330 et un Dell Precision T3610 les 3 sous proxmox."
+    "description": "Je suis étudiant en 4e année à l'ISEN Nantes en alternance chez Horoquartz. Je suis passionné par l'informatique. J'ai appris à coder en autodidacte et je suis actuellement en train d'apprendre le Rust et le Go. Je suis également passionné par l'électronique et le hardware. J'ai construit un homelab composé de 3 serveur, un DELL T320, un DELL T330 et un Dell Precision T3610 les 3 sous proxmox."
   },
   "card": {
     "title": "Etudiant en 4e année a l'ISEN Nantes en alternance chez Horoquartz"
   },
   "projects": {
     "title": "Mes projets",
-    "Front end starter.description": "Mon starter personnel pour projet front end",
-    "Project C - ISEN CIR 1.description": "Projet de fin de 1ere année à l'ISEN Nantes",
-    "Projet robot.description": "Projet de robot avec le club Modelec ISEN pour la coupe de france de robotique (Developpement et déploiment sur Raspberry Pi)",
-    "MercuryCloud.description": "Projet d'herbergeur de serveur de jeu et VPS. Poste de support technique, administrateur des service VPS, Game et web.",
-    "Projet C++ - ISEN CIR 2.description": "Projet de fin de 4e semestre à l'ISEN Nantes. Création d'un jeu de type Tower Defense en C++ avec la librairie QT6.",
-    "Github NTFY.description": "Projet de notification pour les releases github et dockerhub qui envoie des notifications sur ntfy, gotify et discord.",
-    "Projet C++ - ISEN CIPA 3.description": "Projet de jeu de simulation de comportement de banc de poisson en C++ avec la librairie SLD2, avec support du multijoueur.",
-    "Alternance Horoquartz.description": "Développement d'un système de mise à jour pour les produits Horoquartz."
+    "Front end starter": {
+      "title": "Front end starter",
+      "description": "Mon starter personnel pour projet front end"
+    },
+    "Project C - ISEN CIR 1": {
+      "title": "Projet C - ISEN CIR 1",
+      "description": "Projet de fin de 1ere année à l'ISEN Nantes"
+    },
+    "Projet robot": {
+      "title": "Projet robot",
+      "description": "Projet de robot avec le club Modelec ISEN pour la coupe de france de robotique (Developpement et déploiment sur Raspberry Pi)"
+    },
+    "MercuryCloud": {
+      "title": "MercuryCloud",
+      "description": "Projet d'herbergeur de serveur de jeu et VPS. Poste de support technique, administrateur des service VPS, Game et web."
+    },
+    "Projet C++ - ISEN CIR 2": {
+      "title": "Projet C++ - ISEN CIR 2",
+      "description": "Projet de fin de 4e semestre à l'ISEN Nantes. Création d'un jeu de type Tower Defense en C++ avec la librairie QT6."
+    },
+    "Github NTFY": {
+      "title": "Github NTFY",
+      "description": "Projet de notification pour les releases github et dockerhub qui envoient des notifications sur ntfy, gotify et discord."
+    },
+    "Projet C++ - ISEN CIPA 3": {
+      "title": "Projet C++ - ISEN CIPA 3",
+      "description": "Projet de jeu de simulation de comportement de banc de poisson en C++ avec la librairie SLD2, avec support du multijoueur."
+    },
+    "Alternance Horoquartz": {
+      "title": "Alternance Horoquartz",
+      "description": "Développement d'un système de mise à jour pour les produits Horoquartz."
+    }
   },
   "cv": {
     "title": "Mon CV",
@@ -136,7 +160,7 @@
         "current": true,
         "description": [
           "Développement d'un système de mise à jour pour les produits Horoquartz",
-          "Conception et implémentation d'APIs REST avec Node.js et Go",
+          "Mise en oeuvre d'APIs REST avec Node.js et Go",
           "Gestion des bases de données PostgreSQL",
           "Déploiement avec Docker et Kubernetes sur Azure"
         ],
