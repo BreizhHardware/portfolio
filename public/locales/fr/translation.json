@@ -1,80 +1,125 @@
 {
-  "about.title": "A propos de moi",
-  "about.description": "Je suis étudiant en 4e année à l'ISEN Nantes en alternance chez Horoquartz. Je suis passionné par l'informatique. J'ai appris à coder en autodidacte et je suis actuellement en train d'apprendre le Rust et le Go. Je suis également passionné par l'électronique et le hardware. Je possède un homelab composé de 3 serveur, un DELL T320, un DELL T330 et un Dell Precision T3610 les 3 sous proxmox.",
-  "card.title": "Etudiant en 4e année a l'ISEN Nantes en alternance chez Horoquartz",
-  "projects.title": "Mes projets",
-  "projects.Front end starter.description": "Mon starter personnel pour projet front end",
-  "projects.Project C - ISEN CIR 1.description": "Projet de fin de 1ere année à l'ISEN Nantes",
-  "projects.Projet robot.description": "Projet de robot avec le club Modelec ISEN pour la coupe de france de robotique (Developpement et déploiment sur Raspberry Pi)",
-  "projects.MercuryCloud.description": "Projet d'herbergeur de serveur de jeu et VPS. Poste de support technique, administrateur des service VPS, Game et web.",
-  "projects.Projet C++ - ISEN CIR 2.description": "Projet de fin de 4e semestre à l'ISEN Nantes. Création d'un jeu de type Tower Defense en C++ avec la librairie QT6.",
-  "projects.Github NTFY.description": "Projet de notification pour les releases github et dockerhub qui envoie des notifications sur ntfy, gotify et discord.",
-  "projects.Projet C++ - ISEN CIPA 3.description": "Projet de jeu de simulation de comportement de banc de poisson en C++ avec la librairie SLD2, avec support du multijoueur.",
-  "projects.Alternance Horoquartz.description": "Développement d'un système de mise à jour pour les produits Horoquartz.",
-  "cv.title": "Mon CV",
-  "cv.path": "/CV-Felix-MARQUET.pdf",
-  "nav.about": "A propos de moi",
-  "nav.projects": "Mes projets",
-  "nav.cv": "Mon CV",
-  "skills.beginner": "Débutant",
-  "skills.intermediate": "Intermédiaire",
-  "skills.expert": "Expert",
-  "skills.examples.C.title": "Projets C",
-  "skills.examples.C.description": "Projet de fin de 1ère année à l'ISEN, algorithmes de base, création d'une api REST",
-  "skills.examples.C++.title": "Projets C++",
-  "skills.examples.C++.description": "Tower Defense en Qt6, simulation de banc de poissons avec SDL2 avec support du multijoueur, algorithmes de base",
-  "skills.examples.Admin Système.title": "Administration Système",
-  "skills.examples.Admin Système.description": "Configuration de 3 serveurs DELL sous Proxmox, virtualisation, maintenance des machines virtuelles, deploiement d'applications dans Azure",
-  "skills.examples.Python.title": "Projets Python",
-  "skills.examples.Python.description": "Github NTFY pour les notifications des releases github et dockerhub, projets de cours",
-  "skills.examples.PHP.title": "Projets PHP",
-  "skills.examples.PHP.description": "Développements web avec PHP, AJAX, postgreSQL",
-  "skills.examples.HTML/CSS.title": "Développement Front-end",
-  "skills.examples.HTML/CSS.description": "Front-end starter personnalisé, projet de base, divers projets web",
-  "skills.examples.JS/TS.title": "JavaScript/TypeScript",
-  "skills.examples.JS/TS.description": "Développement React, ce portfolio, api NodeJS avec Express, Création d'une application mobile Studysen avec React Native, projets professionnels",
-  "skills.examples.Linux.title": "Administration Linux",
-  "skills.examples.Linux.description": "Configuration de serveurs, administration système, Ansible playbooks",
-  "skills.examples.Go.title": "Projets Go",
-  "skills.examples.Go.description": "Initiation au langage, Création d'une api REST avec Fiber, Go Gin et la librairie standard, projets professionnels",
-  "skills.examples.Docker.title": "Containerisation",
-  "skills.examples.Docker.description": "Déploiement de conteneurs, configuration Docker Compose, création d'images, déploiement de services en haute disponibilité via Swarm et Kubernetes",
-  "contact.title": "Contact",
-  "contact.subtitle": "Une question ? Un projet ? N'hésitez pas à me contacter !",
-  "contact.info.title": "Informations de contact",
-  "contact.info.email": "Email",
-  "contact.info.status": "Statut",
-  "contact.info.statusValue": "Étudiant ISEN - Alternant chez Horoquartz",
-  "contact.info.response": "Réponse",
-  "contact.info.responseValue": "Généralement sous 24h",
-  "contact.subjects.title": "Sujets d'intérêt",
-  "contact.subjects.list": [
-    "Développement Web",
-    "Administration Système",
-    "DevOps",
-    "Alternance",
-    "Projets Open Source",
-    "Homelab",
-    "Collaboration",
-    "Stage/Emploi"
-  ],
-  "contact.form.title": "Envoyez-moi un message",
-  "contact.form.name": "Nom complet",
-  "contact.form.namePlaceholder": "Votre nom",
-  "contact.form.email": "Email",
-  "contact.form.emailPlaceholder": "votre.email@exemple.com",
-  "contact.form.subject": "Sujet",
-  "contact.form.subjectPlaceholder": "Objet de votre message",
-  "contact.form.message": "Message",
-  "contact.form.messagePlaceholder": "Votre message...",
-  "contact.form.send": "Envoyer le message",
-  "contact.form.sending": "Envoi en cours...",
-  "contact.form.success": "Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais.",
-  "contact.form.error": "Une erreur est survenue. Veuillez réessayer plus tard.",
-  "skills.examples.Rust.title": "Projets Rust",
-  "skills.examples.Rust.description": "Apprentissage du langage, création d'une api REST avec Ntex, récriture de l'api github NTFY en Rust",
-  "skills.examples.React.title": "Développement React",
-  "skills.examples.React.description": "Ce portfolio, site web de Modelec, application mobile Studysen, projets professionnels",
+  "about": {
+    "title": "A propos de moi",
+    "description": "Je suis étudiant en 4e année à l'ISEN Nantes en alternance chez Horoquartz. Je suis passionné par l'informatique. J'ai appris à coder en autodidacte et je suis actuellement en train d'apprendre le Rust et le Go. Je suis également passionné par l'électronique et le hardware. Je possède un homelab composé de 3 serveur, un DELL T320, un DELL T330 et un Dell Precision T3610 les 3 sous proxmox."
+  },
+  "card": {
+    "title": "Etudiant en 4e année a l'ISEN Nantes en alternance chez Horoquartz"
+  },
+  "projects": {
+    "title": "Mes projets",
+    "Front end starter.description": "Mon starter personnel pour projet front end",
+    "Project C - ISEN CIR 1.description": "Projet de fin de 1ere année à l'ISEN Nantes",
+    "Projet robot.description": "Projet de robot avec le club Modelec ISEN pour la coupe de france de robotique (Developpement et déploiment sur Raspberry Pi)",
+    "MercuryCloud.description": "Projet d'herbergeur de serveur de jeu et VPS. Poste de support technique, administrateur des service VPS, Game et web.",
+    "Projet C++ - ISEN CIR 2.description": "Projet de fin de 4e semestre à l'ISEN Nantes. Création d'un jeu de type Tower Defense en C++ avec la librairie QT6.",
+    "Github NTFY.description": "Projet de notification pour les releases github et dockerhub qui envoie des notifications sur ntfy, gotify et discord.",
+    "Projet C++ - ISEN CIPA 3.description": "Projet de jeu de simulation de comportement de banc de poisson en C++ avec la librairie SLD2, avec support du multijoueur.",
+    "Alternance Horoquartz.description": "Développement d'un système de mise à jour pour les produits Horoquartz."
+  },
+  "cv": {
+    "title": "Mon CV",
+    "path": "/CV-Felix-MARQUET.pdf"
+  },
+  "nav": {
+    "about": "A propos de moi",
+    "projects": "Mes projets",
+    "cv": "Mon CV",
+    "contact": "Contact",
+    "experience": "Expérience",
+    "github": "GitHub"
+  },
+  "skills": {
+    "beginner": "Débutant",
+    "intermediate": "Intermédiaire",
+    "expert": "Expert",
+    "examples": {
+      "C": {
+      "title": "Projets C",
+      "description": "Projet de fin de 1ère année à l'ISEN, algorithmes de base, création d'une api REST"
+      },
+      "C++": {
+        "title": "Projets C++",
+        "description": "Tower Defense en Qt6, simulation de banc de poissons avec SDL2 avec support du multijoueur, algorithmes de base"
+      },
+      "Admin Système": {
+        "title": "Administration Système",
+        "description": "Configuration de 3 serveurs DELL sous Proxmox, virtualisation, maintenance des machines virtuelles, deploiement d'applications dans Azure"
+      },
+      "Python": {
+        "title": "Projets Python",
+        "description": "Github NTFY pour les notifications des releases github et dockerhub, projets de cours"
+      },
+      "PHP": {
+        "title": "Projets PHP",
+        "description": "Développements web avec PHP, AJAX, postgreSQL"
+      },
+      "HTML/CSS": {
+        "title": "Développement Front-end",
+        "description": "Front-end starter personnalisé, projet de base, divers projets web"
+      },
+      "JS/TS": {
+        "title": "JavaScript/TypeScript",
+        "description": "Développement React, ce portfolio, api NodeJS avec Express, Création d'une application mobile Studysen avec React Native, projets professionnels"
+      },
+      "Linux": {
+        "title": "Administration Linux",
+        "description": "Configuration de serveurs, administration système, Ansible playbooks"
+      },
+      "Go": {
+        "title": "Projets Go",
+        "description": "Initiation au langage, Création d'une api REST avec Fiber, Go Gin et la librairie standard, projets professionnels"
+      },
+      "Docker": {
+        "title": "Containerisation",
+        "description": "Déploiement de conteneurs, configuration Docker Compose, création d'images, déploiement de services en haute disponibilité via Swarm et Kubernetes"
+      },
+      "Rust": {
+        "title": "Projets Rust",
+        "description": "Apprentissage du langage, création d'une api REST avec Ntex, récriture de l'api github NTFY en Rust"
+      },
+      "React": {
+        "title": "Développement React",
+        "description": "Ce portfolio, site web de Modelec, application mobile Studysen, projets professionnels"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Une question ? Un projet ? N'hésitez pas à me contacter !",
+    "info": {
+      "title": "Informations de contact",
+      "email": "Email",
+      "status": "Statut",
+    "statusValue": "Étudiant ISEN - Alternant chez Horoquartz",
+    "response": "Réponse",
+    "responseValue": "Généralement sous 24h"
+      },
+    "subjects.title": "Sujets d'intérêt",
+    "subjects.list": [
+      "Développement Web",
+      "Administration Système",
+      "DevOps",
+      "Alternance",
+      "Projets Open Source",
+      "Homelab",
+      "Collaboration",
+      "Stage/Emploi"
+    ],
+    "form.title": "Envoyez-moi un message",
+    "form.name": "Nom complet",
+    "form.namePlaceholder": "Votre nom",
+    "form.email": "Email",
+    "form.emailPlaceholder": "votre.email@exemple.com",
+    "form.subject": "Sujet",
+    "form.subjectPlaceholder": "Objet de votre message",
+    "form.message": "Message",
+    "form.messagePlaceholder": "Votre message...",
+    "form.send": "Envoyer le message",
+    "form.sending": "Envoi en cours...",
+    "form.success": "Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais.",
+    "form.error": "Une erreur est survenue. Veuillez réessayer plus tard."
+  },
   "experience": {
     "title": "Parcours & Expérience",
     "description": "Mon évolution professionnelle et académique",
@@ -143,5 +188,16 @@
         "technologies": ["C++", "QT", "Raspberry Pi", "Linux"]
       }
     ]
+  },
+  "github": {
+    "title": "Statistiques GitHub",
+    "description": "Un aperçu de mon activité et de mes contributions sur GitHub",
+    "stars": "Étoiles",
+    "forks": "Forks",
+    "commits": "Commits",
+    "languages": "Langages les plus utilisés",
+    "legend": "Calendrier des contributions",
+    "totalCommits": "Total des commits",
+    "activity": "Activité récente"
   }
 }

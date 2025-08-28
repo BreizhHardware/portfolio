@@ -3,21 +3,22 @@ import { FaSun, FaMoon} from "react-icons/fa";
 import ReactDOM from "react-dom";
 import './output.css';
 import './other.css';
-import Card from "./components/Card.tsx";
-import About from "./components/About.tsx";
-import Skills from "./components/Skills.tsx";
-import Project from "./components/Project.tsx";
-import Footer from "./components/Footer.tsx";
-import CV from "./components/CV.tsx";
-import Menu from "./components/Menu.tsx";
-import LoadingScreen from "./components/LoadingScreen.tsx";
-import ParticlesBackground from "./components/ParticlesBackground.tsx";
-import ContactSection from "./components/ContactSection.tsx";
-import TimelineSection from "./components/TimelineSection.tsx";
-import data from "./assets/DATA.ts";
+import Card from "./components/Card";
+import About from "./components/About";
+import Skills from "./components/Skills";
+import Project from "./components/Project";
+import Footer from "./components/Footer";
+import CV from "./components/CV";
+import Menu from "./components/Menu";
+import LoadingScreen from "./components/LoadingScreen";
+import ParticlesBackground from "./components/ParticlesBackground";
+import ContactSection from "./components/ContactSection";
+import TimelineSection from "./components/TimelineSection";
+import data from "./assets/DATA";
 import { useTranslation } from "react-i18next";
 import i18n from './i18n.js';
 import {createRoot} from "react-dom/client";
+import GitHubStatsSection from 'components/GitHubStatsSection';
 
 function App() {
     // Initialise le thème depuis localStorage ou détecte le thème système
@@ -78,7 +79,12 @@ function App() {
                     <About />
                     <Skills skills={data.skills} />
                     <hr className="text-gray-800 dark:text-gray-200 mt-4" id="experience" />
-                    <TimelineSection experience={data.experience} />
+                    <TimelineSection experience={data.experience.map(item => ({
+                        ...item,
+                        type: item.type as "work" | "education" | "achievement"
+                    }))} />
+                    <hr className="text-gray-800 dark:text-gray-200 mt-4" id="github" />
+                    <GitHubStatsSection />
                     <hr className="text-gray-800 dark:text-gray-200 mt-4" id="projects" />
                     <Project projects={data.projects} />
                     <hr className="text-gray-800 dark:text-gray-200 mt-4" id="contact" />
@@ -99,8 +105,10 @@ function App() {
 }
 
 const container = document.getElementById('root');
-const root = createRoot(container);
-root.render(<App />);
+if (container) {
+    const root = createRoot(container);
+    root.render(<App />);
+}
 // ReactDOM.render(<App />, document.getElementById('root'));
 
 export default App;

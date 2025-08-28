@@ -12,6 +12,7 @@ interface Social {
 
 interface CardProps {
     name: string;
+    title: string;
     social: Social;
 }
 
