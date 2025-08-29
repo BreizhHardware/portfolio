@@ -216,6 +216,7 @@
   "github": {
     "title": "Statistiques GitHub",
     "description": "Un aperçu de mon activité et de mes contributions sur GitHub",
+    "repositories": "Dépots",
     "stars": "Étoiles",
     "forks": "Forks",
     "commits": "Commits",
