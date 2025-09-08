@@ -12,7 +12,7 @@
     "@types/react": "19.1.12",
     "@types/react-dom": "19.1.9",
     "aos": "^2.3.4",
-    "browserslist": "^4.25.3",
+    "browserslist": "^4.25.4",
     "browserslist-useragent": "^4.0.0",
     "cypress": "^15.0.0",
     "i18next": "^25.4.2",
