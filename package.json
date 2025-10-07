@@ -15,7 +15,7 @@
     "browserslist": "^4.26.3",
     "browserslist-useragent": "^4.0.0",
     "cypress": "^15.3.0",
-    "i18next": "^25.4.2",
+    "i18next": "^25.5.3",
     "i18next-http-backend": "^3.0.2",
     "react": "19.1.1",
     "react-dom": "19.1.1",

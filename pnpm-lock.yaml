@@ -45,8 +45,8 @@ importers:
         specifier: ^15.3.0
         version: 15.3.0
       i18next:
-        specifier: ^25.4.2
-        version: 25.4.2(typescript@5.9.3)
+        specifier: ^25.5.3
+        version: 25.5.3(typescript@5.9.3)
       i18next-http-backend:
         specifier: ^3.0.2
         version: 3.0.2
@@ -61,7 +61,7 @@ importers:
         version: 1.4.0(react@19.1.1)
       react-i18next:
         specifier: ^15.7.4
-        version: 15.7.4(i18next@25.4.2(typescript@5.9.3))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.9.3)
+        version: 15.7.4(i18next@25.5.3(typescript@5.9.3))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.9.3)
       react-icons:
         specifier: ^5.5.0
         version: 5.5.0(react@19.1.1)
@@ -1452,8 +1452,8 @@ packages:
   i18next-http-backend@3.0.2:
     resolution: {integrity: sha512-PdlvPnvIp4E1sYi46Ik4tBYh/v/NbYfFFgTjkwFl0is8A18s7/bx9aXqsrOax9WUbeNS6mD2oix7Z0yGGf6m5g==}
 
-  i18next@25.4.2:
-    resolution: {integrity: sha512-gD4T25a6ovNXsfXY1TwHXXXLnD/K2t99jyYMCSimSCBnBRJVQr5j+VAaU83RJCPzrTGhVQ6dqIga66xO2rtd5g==}
+  i18next@25.5.3:
+    resolution: {integrity: sha512-joFqorDeQ6YpIXni944upwnuHBf5IoPMuqAchGVeQLdWC2JOjxgM9V8UGLhNIIH/Q8QleRxIi0BSRQehSrDLcg==}
     peerDependencies:
       typescript: ^5
     peerDependenciesMeta:
@@ -2072,9 +2072,6 @@ packages:
     engines: {node: '>=8.0.0'}
     os: [darwin, linux, win32, freebsd, openbsd, netbsd, sunos, android]
     hasBin: true
-
-  tailwindcss@4.1.12:
-    resolution: {integrity: sha512-DzFtxOi+7NsFf7DBtI3BJsynR+0Yp6etH+nRPTbpWnS2pZBaSksv/JGctNwSWzbFjp0vxSqknaUylseZqMDGrA==}
 
   tailwindcss@4.1.14:
     resolution: {integrity: sha512-b7pCxjGO98LnxVkKjaZSDeNuljC4ueKUddjENJOADtubtdo8llTaJy7HwBMeLNSSo2N5QIAgklslK1+Ir8r6CA==}
@@ -3764,9 +3761,9 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  i18next@25.4.2(typescript@5.9.3):
+  i18next@25.5.3(typescript@5.9.3):
     dependencies:
-      '@babel/runtime': 7.28.3
+      '@babel/runtime': 7.28.4
     optionalDependencies:
       typescript: 5.9.3
 
@@ -4138,11 +4135,11 @@ snapshots:
       github-buttons: 2.29.1
       react: 19.1.1
 
-  react-i18next@15.7.4(i18next@25.4.2(typescript@5.9.3))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.9.3):
+  react-i18next@15.7.4(i18next@25.5.3(typescript@5.9.3))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.9.3):
     dependencies:
       '@babel/runtime': 7.28.4
       html-parse-stringify: 3.0.1
-      i18next: 25.4.2(typescript@5.9.3)
+      i18next: 25.5.3(typescript@5.9.3)
       react: 19.1.1
     optionalDependencies:
       react-dom: 19.1.1(react@19.1.1)
@@ -4337,8 +4334,6 @@ snapshots:
   svg-parser@2.0.4: {}
 
   systeminformation@5.27.7: {}
-
-  tailwindcss@4.1.12: {}
 
   tailwindcss@4.1.14: {}
 
