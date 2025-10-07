@@ -3,7 +3,7 @@ import React, {JSX} from 'react';
 import {
     FaCuttlefish,
     FaDocker,
-    FaHtml5,
+    FaHtml5, FaJava,
     FaJs,
     FaLinux,
     FaPhp,
@@ -31,6 +31,7 @@ const iconMapping: IconMapping = {
     "Docker": <FaDocker className={iconClassName} />,
     "Rust": <FaRust className={iconClassName} />,
     "React": <FaReact className={iconClassName} />,
+    "Java": <FaJava className={iconClassName} />,
 };
 
 interface SkillCardProps {

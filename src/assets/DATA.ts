@@ -46,7 +46,7 @@ const Felix = {
         },
         {
             skillName: "Go",
-            skillLevel: 50,
+            skillLevel: 60,
         },
         {
             skillName: "Docker",
@@ -59,6 +59,10 @@ const Felix = {
         {
             skillName: "React",
             skillLevel: 80,
+        },
+        {
+            skillName: "Java",
+            skillLevel: 30,
         }
     ],
     experience: [

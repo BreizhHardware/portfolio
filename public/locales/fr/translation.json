@@ -105,6 +105,10 @@
       "React": {
         "title": "Développement React",
         "description": "Ce portfolio, site web de Modelec, application mobile Studysen, projets professionnels"
+      },
+      "Java": {
+        "title": "Projets Java",
+        "description": "Initiation au langage, plugin Minecraft."
       }
     }
   },
