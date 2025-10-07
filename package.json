@@ -60,7 +60,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@simonsmith/cypress-image-snapshot": "^10.0.2",
-    "@vitejs/plugin-react": "^5.0.2",
+    "@vitejs/plugin-react": "^5.0.4",
     "prettier": "^3.6.2",
     "vite": "^7.1.9",
     "vite-plugin-svgr": "^4.5.0",
