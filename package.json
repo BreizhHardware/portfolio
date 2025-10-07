@@ -37,7 +37,7 @@
     "build:css": "npx @tailwindcss/cli -i src/index.css -o src/output.css",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "test": "browserslist"
+    "test": "browserslist && pnpm run cypress:run"
   },
   "eslintConfig": {
     "extends": [
