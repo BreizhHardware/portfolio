@@ -14,7 +14,6 @@
     "aos": "^2.3.4",
     "browserslist": "^4.26.3",
     "browserslist-useragent": "^4.0.0",
-    "cypress": "^15.3.0",
     "i18next": "^25.5.3",
     "i18next-http-backend": "^3.0.2",
     "react": "19.2.0",
@@ -27,8 +26,7 @@
     "tailwindcss": "^4.1.14",
     "tsparticles-slim": "^2.12.0",
     "typescript": "^5.9.3",
-    "web-vitals": "^5.1.0",
-    "yarn": "^1.22.22"
+    "web-vitals": "^5.1.0"
   },
   "scripts": {
     "start": "vite",
@@ -61,6 +59,7 @@
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@simonsmith/cypress-image-snapshot": "^10.0.2",
     "@vitejs/plugin-react": "^5.0.4",
+    "cypress": "^15.3.0",
     "prettier": "^3.6.2",
     "vite": "^7.1.9",
     "vite-plugin-svgr": "^4.5.0",
