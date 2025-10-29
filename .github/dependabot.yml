@@ -4,7 +4,9 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "weekly"
+    target-branch: 'dev'
   - package-ecosystem: "github-actions" # specify GitHub Actions as the package ecosystem
     directory: "/.github/workflows" # Location of package manifests
     schedule:
       interval: "weekly"
+    target-branch: 'dev'
