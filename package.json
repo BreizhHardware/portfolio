@@ -57,7 +57,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@simonsmith/cypress-image-snapshot": "^10.0.2",
+    "@simonsmith/cypress-image-snapshot": "^10.0.3",
     "@vitejs/plugin-react": "^5.0.4",
     "cypress": "^15.5.0",
     "prettier": "^3.6.2",
