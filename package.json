@@ -14,7 +14,7 @@
     "aos": "^2.3.4",
     "browserslist": "^4.26.3",
     "browserslist-useragent": "^4.0.0",
-    "i18next": "^25.6.0",
+    "i18next": "^25.6.1",
     "i18next-http-backend": "^3.0.2",
     "react": "19.2.0",
     "react-dom": "19.2.0",
