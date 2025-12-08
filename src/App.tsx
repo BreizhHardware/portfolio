@@ -18,7 +18,6 @@ import data from "./assets/DATA";
 import { useTranslation } from "react-i18next";
 import i18n from './i18n';
 import {createRoot} from "react-dom/client";
-import GitHubStatsSection from 'components/GitHubStatsSection';
 
 function App() {
     // Initialise le thème depuis localStorage ou détecte le thème système
@@ -83,8 +82,6 @@ function App() {
                         ...item,
                         type: item.type as "work" | "education" | "achievement"
                     }))} />
-                    <hr className="text-gray-800 dark:text-gray-200 mt-4" id="github" />
-                    <GitHubStatsSection />
                     <hr className="text-gray-800 dark:text-gray-200 mt-4" id="projects" />
                     <Project projects={data.projects} />
                     <hr className="text-gray-800 dark:text-gray-200 mt-4" id="contact" />
