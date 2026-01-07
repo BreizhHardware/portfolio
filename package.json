@@ -22,7 +22,7 @@
     "react-i18next": "^16.5.1",
     "react-icons": "^5.5.0",
     "react-particles": "^2.12.2",
-    "sass": "^1.97.1",
+    "sass": "^1.97.2",
     "tailwindcss": "^4.1.18",
     "tsparticles-slim": "^2.12.0",
     "typescript": "^5.9.3",
@@ -59,10 +59,10 @@
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@simonsmith/cypress-image-snapshot": "^10.0.3",
     "@vitejs/plugin-react": "^5.1.2",
-    "cypress": "^15.8.1",
+    "cypress": "^15.8.2",
     "prettier": "^3.7.4",
-    "vite": "^7.3.0",
+    "vite": "^7.3.1",
     "vite-plugin-svgr": "^4.5.0",
-    "vite-tsconfig-paths": "^6.0.1"
+    "vite-tsconfig-paths": "^6.0.3"
   }
 }
