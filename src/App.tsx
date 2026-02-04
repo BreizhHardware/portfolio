@@ -11,7 +11,6 @@ import Footer from "./components/Footer";
 import CV from "./components/CV";
 import Menu from "./components/Menu";
 import LoadingScreen from "./components/LoadingScreen";
-import ParticlesBackground from "./components/ParticlesBackground";
 import ContactSection from "./components/ContactSection";
 import TimelineSection from "./components/TimelineSection";
 import data from "./assets/DATA";
@@ -66,9 +65,8 @@ function App() {
     }
 
     return (
-        <div className="min-h-screen py-10 bg-gray-100 dark:bg-gray-900 m-0" data-testid="root">
-            <ParticlesBackground isDark={theme === "dark"} />
-            <div className={`mobile-margin transition-all duration-1000 ${showContent ? 'animate-fadeInUp' : 'opacity-0'}`}>
+        <div className="min-h-screen py-10 bg-gray-100 dark:bg-gray-900 m-0 relative" data-testid="root">
+            <div className={`mobile-margin relative z-10 transition-all duration-1000 ${showContent ? 'animate-fadeInUp' : 'opacity-0'}`}>
                 <Menu />
                 <div data-aos="face-down" data-aos-duration="800" id="top">
                     <Card name={data.name} title={data.title} social={data.social} />
