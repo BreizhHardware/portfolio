@@ -45,7 +45,9 @@ jobs:
               labels: 'security,audit'
             });
 
-            if (issues.data.length > 0) {
+            const openIssues = issues.data.filter(issue => !issue.pull_request);
+
+            if (openIssues.length > 0) {
               console.log('An open security audit issue already exists. Skipping creation.');
               return;
             }
