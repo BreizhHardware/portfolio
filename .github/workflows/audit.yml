@@ -38,7 +38,21 @@ jobs:
         uses: actions/github-script@v8
         with:
           script: |
-            github.rest.issues.create({
+            const issues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'security,audit'
+            });
+
+            const openIssues = issues.data.filter(issue => !issue.pull_request);
+
+            if (openIssues.length > 0) {
+              console.log('An open security audit issue already exists. Skipping creation.');
+              return;
+            }
+
+            await github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
               title: 'Security Audit Failed',
