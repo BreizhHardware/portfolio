@@ -57,7 +57,7 @@
     "@babel/plugin-transform-private-property-in-object": "^7.28.6",
     "@simonsmith/cypress-image-snapshot": "^10.0.3",
     "@vitejs/plugin-react": "^5.1.4",
-    "cypress": "^15.10.0",
+    "cypress": "^15.11.0",
     "prettier": "^3.8.1",
     "vite": "^7.3.1",
     "vite-plugin-svgr": "^4.5.0",
