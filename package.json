@@ -12,7 +12,7 @@
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "aos": "^2.3.4",
-    "browserslist": "^4.28.1",
+    "browserslist": "^4.28.2",
     "browserslist-useragent": "^4.0.0",
     "i18next": "^25.10.9",
     "i18next-http-backend": "^3.0.2",
