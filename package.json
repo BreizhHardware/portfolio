@@ -15,7 +15,7 @@
     "browserslist": "^4.28.2",
     "browserslist-useragent": "^4.0.0",
     "i18next": "^26.0.3",
-    "i18next-http-backend": "^3.0.2",
+    "i18next-http-backend": "^3.0.5",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "react-github-btn": "^1.4.0",
