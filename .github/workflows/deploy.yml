@@ -88,7 +88,7 @@ jobs:
       - name: Public URL check (informational)
         continue-on-error: true
         run: |
-          code=$(curl -sL --max-time 10 -A "$UA" -o /dev/null -w '%{http_code}' "$SITE_URL" || true)
+          code=$(curl -sL --max-time 10 -A "$UA" -H "X-CI-Token: $CI_TOKEN" -o /dev/null -w '%{http_code}' "$SITE_URL" || true)
           echo "HTTP $code"
           if [ "$code" != "200" ]; then
             echo "::warning::Public URL returned HTTP $code (Cloudflare may challenge GitHub runners)"
@@ -96,6 +96,7 @@ jobs:
         env:
           SITE_URL: ${{ vars.SITE_URL }}
           UA: github-action-breizhhardware-ci
+          CI_TOKEN: ${{ secrets.SMOKE_TEST_TOKEN }}
 
       - name: Rollback on failure
         if: failure() && steps.verify.outcome == 'failure'
