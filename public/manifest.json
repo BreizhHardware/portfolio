@@ -1,0 +1,16 @@
+{
+  "short_name": "Félix MARQUET",
+  "name": "Portfolio Félix MARQUET",
+  "icons": [
+    {
+      "src": "/V5.png",
+      "type": "image/png",
+      "sizes": "1024x1024",
+      "purpose": "any"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

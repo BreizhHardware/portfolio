@@ -31,7 +31,7 @@ function Card({name, social: {github, twitter, linkedin, mail}}: CardProps){
                     />
                 </div>
                 <div className="text-center mt-5">
-                    <p className="text-xl sm:text-2xl text-gray-900 dark:text-white">{name}</p>
+                    <h1 className="text-xl sm:text-2xl text-gray-900 dark:text-white">{name}</h1>
                     <p className="text-xs sm:text-base text-gray-600 pt-2 pb-4 px-5 w-auto inline-block border-b-2 dark:text-gray-200"> {t('card.title')} </p>
                     <div className="flex align-center justify-center mt-4">
                         <a
