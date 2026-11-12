@@ -4,73 +4,102 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
 
 jobs:
-  build-and-deploy:
+  ci:
+    uses: ./.github/workflows/ci.yml
+    with:
+      environment: production
+    secrets: inherit
+
+  deploy:
+    needs: ci
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     environment: production
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v6
+      - name: Download dist
+        uses: actions/download-artifact@v8
         with:
-          fetch-depth: 0
+          name: dist
+          path: dist
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
+      - name: Install lftp
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq lftp
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v6
-        with:
-          version: latest
-
-      - name: Use Node.js
-        uses: actions/setup-node@v6
-        with:
-          node-version: '24'
-          cache: 'pnpm'
-
-      - name: Install dependencies and build
+      - name: Trust server host key
         run: |
-          pnpm install --frozen-lockfile
-          pnpm run build
+          mkdir -p ~/.ssh
+          if [ -n "$KNOWN_HOSTS" ]; then
+            echo "$KNOWN_HOSTS" > ~/.ssh/known_hosts
+          else
+            ssh-keyscan -p "$PORT" "$HOST" > ~/.ssh/known_hosts
+          fi
         env:
-          VITE_EMAILJS_SERVICE_ID: ${{ secrets.VITE_EMAILJS_SERVICE_ID }}
-          VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}
-          VITE_EMAILJS_USER_ID: ${{ secrets.VITE_EMAILJS_USER_ID }}
+          HOST: ${{ secrets.SERVER_HOST }}
+          PORT: ${{ secrets.SERVER_PORT }}
+          KNOWN_HOSTS: ${{ secrets.SERVER_KNOWN_HOSTS }}
 
-      - name: Install Cypress binary
-        run: pnpx cypress install
-
-      - name: Install http-server
-        run: pnpm add -D http-server
-
-      - name: Start HTTP server
-        run: pnpx http-server ./dist -p 8080 &
+      - name: Upload and swap webroot
+        run: |
+          lftp -e "
+            set sftp:auto-confirm no;
+            set net:max-retries 3;
+            open -p $PORT -u $USER,$PASS sftp://$HOST;
+            rm -rf webroot-new webroot-old;
+            mirror -R --parallel=4 --verbose dist webroot-new;
+            mv webroot webroot-old;
+            mv webroot-new webroot;
+            bye"
         env:
-          CI: true
+          HOST: ${{ secrets.SERVER_HOST }}
+          PORT: ${{ secrets.SERVER_PORT }}
+          USER: ${{ secrets.SERVER_USERNAME }}
+          PASS: ${{ secrets.SERVER_PASSWORD }}
 
-      - name: Run Cypress tests and Browserslist
-        run: pnpm run test
+      - name: Smoke test
+        id: smoke
+        run: |
+          for i in $(seq 1 10); do
+            curl -sfL --max-time 10 "$SITE_URL" | grep -q "<div id=\"root\"" && exit 0
+            sleep 3
+          done
+          exit 1
         env:
-          CYPRESS_baseUrl: http://localhost:8080
+          SITE_URL: ${{ vars.SITE_URL }}
 
-      - name: Upload Cypress screenshots
-        if: failure()
-        uses: actions/upload-artifact@v7
-        with:
-          name: cypress-screenshots
-          path: cypress/screenshots
+      - name: Rollback on failure
+        if: failure() && steps.smoke.outcome == 'failure'
+        run: |
+          lftp -e "
+            open -p $PORT -u $USER,$PASS sftp://$HOST;
+            mv webroot webroot-failed;
+            mv webroot-old webroot;
+            rm -rf webroot-failed;
+            bye"
+        env:
+          HOST: ${{ secrets.SERVER_HOST }}
+          PORT: ${{ secrets.SERVER_PORT }}
+          USER: ${{ secrets.SERVER_USERNAME }}
+          PASS: ${{ secrets.SERVER_PASSWORD }}
 
-      - name: Copy build directory to server
-        uses: Dylan700/sftp-upload-action@v1.2.3
-        with:
-          server: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USERNAME }}
-          password: ${{ secrets.SERVER_PASSWORD }}
-          port: ${{ secrets.SERVER_PORT }}
-          uploads: |
-            ./dist => /webroot/
-          delete: true
+      - name: Remove previous version
+        run: |
+          lftp -e "
+            open -p $PORT -u $USER,$PASS sftp://$HOST;
+            rm -rf webroot-old;
+            bye"
+        env:
+          HOST: ${{ secrets.SERVER_HOST }}
+          PORT: ${{ secrets.SERVER_PORT }}
+          USER: ${{ secrets.SERVER_USERNAME }}
+          PASS: ${{ secrets.SERVER_PASSWORD }}

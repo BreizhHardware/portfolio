@@ -41,11 +41,12 @@ const ContactSection: React.FC = () => {
     const userId = import.meta.env.VITE_EMAILJS_USER_ID;
 
     if (!serviceId || !templateId || !userId) {
-      console.error('Missing required EmailJS environment variables:', {
-        VITE_EMAILJS_SERVICE_ID: serviceId,
-        VITE_EMAILJS_TEMPLATE_ID: templateId,
-        VITE_EMAILJS_USER_ID: userId
-      });
+      const missing = [
+        !serviceId && 'VITE_EMAILJS_SERVICE_ID',
+        !templateId && 'VITE_EMAILJS_TEMPLATE_ID',
+        !userId && 'VITE_EMAILJS_USER_ID'
+      ].filter(Boolean);
+      console.error('Missing required EmailJS environment variables:', missing.join(', '));
       setStatus({ type: 'error' });
       return;
     }
