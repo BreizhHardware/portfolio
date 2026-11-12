@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { FaSun, FaMoon} from "react-icons/fa";
 import ReactDOM from "react-dom";
 import './output.css';
@@ -6,13 +6,17 @@ import './other.css';
 import Card from "./components/Card";
 import About from "./components/About";
 import Skills from "./components/Skills";
-import Project from "./components/Project";
+const Project = lazy(() => import("./components/Project"));
 import Footer from "./components/Footer";
-import CV from "./components/CV";
+const CV = lazy(() => import("./components/CV"));
 import Menu from "./components/Menu";
 import LoadingScreen from "./components/LoadingScreen";
-import ContactSection from "./components/ContactSection";
-import TimelineSection from "./components/TimelineSection";
+const ContactSection = lazy(() => import("./components/ContactSection"));
+const TimelineSection = lazy(() => import("./components/TimelineSection"));
+const CyberSection = lazy(() => import("./components/CyberSection"));
+const HomelabSection = lazy(() => import("./components/HomelabSection"));
+import ScrollProgress from "./components/ScrollProgress";
+import Reveal from "./components/Reveal";
 import data from "./assets/DATA";
 import { useTranslation } from "react-i18next";
 import i18n from './i18n';
@@ -80,24 +84,30 @@ function App() {
         <div className="min-h-screen py-10 bg-gray-100 dark:bg-gray-900 m-0 relative" data-testid="root">
             <div className={`mobile-margin relative z-10 transition-all duration-1000 ${showContent ? 'animate-fadeInUp' : 'opacity-0'}`}>
                 <Menu />
-                <div data-aos="face-down" data-aos-duration="800" id="top">
+                <ScrollProgress />
+                <div id="top">
                     <Card name={data.name} title={data.title} social={data.social} />
                 </div>
                 <hr className="text-gray-800 dark:text-gray-200 mt-4"  id="about"/>
-                <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
-                    <About />
-                    <Skills skills={data.skills} />
+                <div>
+                    <Reveal><About /></Reveal>
+                    <Reveal><Skills skills={data.skills} /></Reveal>
+                    <Suspense fallback={<div className="min-h-screen" />}>
                     <hr className="text-gray-800 dark:text-gray-200 mt-4" id="experience" />
                     <TimelineSection experience={data.experience.map(item => ({
                         ...item,
                         type: item.type as "work" | "education" | "achievement"
                     }))} />
+                    <hr className="text-gray-800 dark:text-gray-200 mt-4" />
+                    <CyberSection />
+                    <HomelabSection />
                     <hr className="text-gray-800 dark:text-gray-200 mt-4" id="projects" />
                     <Project projects={data.projects} />
                     <hr className="text-gray-800 dark:text-gray-200 mt-4" id="contact" />
-                    <ContactSection />
+                    <Reveal><ContactSection /></Reveal>
                     <hr className="text-gray-800 dark:text-gray-200 mt-4" id="cv" />
                     <CV />
+                    </Suspense>
                     <Footer />
                 </div>
                 <button onClick={toggleTheme} className="fixed bottom-5 right-5 p-2 rounded-full bg-gray-100 dark:bg-gray-900 shadow-md">
