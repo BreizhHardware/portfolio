@@ -52,6 +52,7 @@ jobs:
       - name: Upload and swap webroot
         run: |
           lftp -e "
+            set cmd:fail-exit yes;
             set sftp:auto-confirm no;
             set net:max-retries 3;
             open -p $PORT -u $USER,$PASS sftp://$HOST;
@@ -70,17 +71,23 @@ jobs:
         id: smoke
         run: |
           for i in $(seq 1 10); do
-            curl -sfL --max-time 10 "$SITE_URL" | grep -q "<div id=\"root\"" && exit 0
+            code=$(curl -sL --max-time 10 -A "$UA" -o body.html -w '%{http_code}' "$SITE_URL" || true)
+            echo "Attempt $i: HTTP $code"
+            if [ "$code" = "200" ] && grep -q 'id="root"' body.html; then exit 0; fi
             sleep 3
           done
+          echo "--- Last response (first 500 bytes) ---"
+          head -c 500 body.html
           exit 1
         env:
           SITE_URL: ${{ vars.SITE_URL }}
+          UA: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36
 
       - name: Rollback on failure
         if: failure() && steps.smoke.outcome == 'failure'
         run: |
           lftp -e "
+            set cmd:fail-exit yes;
             open -p $PORT -u $USER,$PASS sftp://$HOST;
             mv webroot webroot-failed;
             mv webroot-old webroot;
@@ -95,6 +102,7 @@ jobs:
       - name: Remove previous version
         run: |
           lftp -e "
+            set cmd:fail-exit yes;
             open -p $PORT -u $USER,$PASS sftp://$HOST;
             rm -rf webroot-old;
             bye"
