@@ -124,7 +124,11 @@ function App() {
 const container = document.getElementById('root');
 if (container) {
     const root = createRoot(container);
-    root.render(<App />);
+    root.render(
+        <Suspense fallback={null}>
+            <App />
+        </Suspense>
+    );
 }
 // ReactDOM.render(<App />, document.getElementById('root'));
 
