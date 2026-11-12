@@ -1,6 +1,6 @@
 const Felix = {
     name: "Félix MARQUET",
-    title: "Etudiant en 2e année a l'ISEN Nantes",
+    title: "Etudiant en 5e année a l'ISEN Nantes",
     social: {
         github: "https://github.com/BreizhHardware",
         twitter: "https://twitter.com/BreizhHardware",
@@ -9,7 +9,7 @@ const Felix = {
     },
     about: {
         title: "A propos de moi",
-        description: "Je suis étudiant en 3e année à l'ISEN Nantes en alternance chez Horoquartz. Je suis passionné par l'informatique. J'ai appris à coder en autodidacte et je suis actuellement en train d'apprendre le C++ et le PHP. Je suis également passionné par l'électronique et le hardware. Je possède un homelab composé de 2 serveur, un DELL T320 et un DELL T330 les 2 sous proxmox."
+        description: "Je suis étudiant en 5e année à l'ISEN Nantes en alternance chez Horoquartz. Je suis passionné par l'informatique. J'ai appris à coder en autodidacte et je suis actuellement en train d'apprendre le C++ et le PHP. Je suis également passionné par l'électronique et le hardware. Je possède un homelab composé de 5 serveur, un DELL T320 et un DELL T330 les 2 sous proxmox."
     },
     skills: [
         {
@@ -118,6 +118,38 @@ const Felix = {
             },
             {
                 id: 4,
+                type: 'work',
+                title: 'Auto-entrepreneur - Développeur',
+                organization: 'Freelance',
+                location: 'Remote',
+                startDate: '2026',
+                endDate: 'Present',
+                current: true,
+                description: [
+                    'Développement de sites web et applications pour des clients',
+                    'Maintenance et mise à jour des systèmes existants',
+                    'Conseil en choix technologiques et optimisation des performances'
+                ],
+                technologies: ['React', 'Node.js', 'PHP', 'MySQL', 'Docker']
+            },
+            {
+                id: 5,
+                type: 'work',
+                title: 'Stage IT - Cuisine Solutions',
+                organization: 'Cuisine Solutions',
+                location: 'Sterling, Virginia, USA',
+                startDate: 'Juillet 2026',
+                endDate: 'Septembre 2026',
+                description: [
+                    'Étude de l\'implémentation de cobots sur les lignes de production (comparatif, schémas, rapport de prix)',
+                    'Développement d\'un TV Controller (Python, C#) pour piloter les écrans de l\'usine',
+                    'Application mobile CSI Stock Manager (React Native / Expo) pour les inventaires d\'entrepôt',
+                    'Travail en anglais au sein de l\'équipe IT américaine et française'
+                ],
+                technologies: ['Python', 'C#', 'React Native', 'TypeScript', 'Node.js']
+            },
+            {
+                id: 6,
                 type: 'achievement',
                 title: 'Projet Robot - Coupe de France de Robotique',
                 organization: 'Club Modelec ISEN',
@@ -135,10 +167,10 @@ const Felix = {
     ],
     projects: [
         {
-            title: "Front end starter",
-            description: "Mon starter personnel pour projet front end",
-            tags: ["HTML", "CSS", "JS"],
-            link: "https://github.com/BreizhHardware/front-end-starter"
+            title: "Justif",
+            description: "Outils de gestion de notes de frais open-source",
+            tags: ["React", "Node.js", "PostgreSQL", "Docker"],
+            link: "https://github.com/BreizhHardware/justif"
         },
         {
             title: "Project C - ISEN CIR 1",
