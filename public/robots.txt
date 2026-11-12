@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://felix.mrqt.fr/sitemap.xml
+Sitemap: https://mrqt.fr/sitemap.xml

@@ -1,6 +1,6 @@
 const Felix = {
     name: "Félix MARQUET",
-    title: "Etudiant en 5e année a l'ISEN Nantes",
+    title: "Etudiant en 5e année (Master cybersécurité) à l'ISEN Nantes",
     social: {
         github: "https://github.com/BreizhHardware",
         twitter: "https://twitter.com/BreizhHardware",
@@ -65,6 +65,24 @@ const Felix = {
             skillLevel: 30,
         }
     ],
+    // À compléter : { name: "eJPT", status: "inProgress" } (status: "inProgress" | "obtained")
+    certifications: [
+        { name: "CCNS", status: "inProgress" },
+    ] as { name: string; status: "inProgress" | "obtained" }[],
+    homelab: {
+        stats: [
+            { key: "servers", value: 5 },
+            { key: "proxmox", value: 2 },
+        ],
+        nodes: [
+            { name: "DELL T320", role: "Proxmox VE" },
+            { name: "DELL T330", role: "Serveur Média" },
+            { name: "Geekom mini PC", role: "Proxmox VE" },
+            { name: "Acemagic mini PC", role: "Proxmox VE" },
+            { name: "aoostar wtr pro", role: "Stockage" },
+        ],
+        tools: ["Proxmox", "Docker", "Ansible", "Linux", "Terraform"],
+    },
     experience: [
         {
             id: 1,

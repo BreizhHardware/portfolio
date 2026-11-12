@@ -48,9 +48,6 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
     const checkAssets = async () => {
       const assetsToCheck = [
         { url: 'https://1.gravatar.com/avatar/4d43af207280d1d23e2a2905577c7b6167723fec2d33f946cc86f114c1a85b8d?size=256', name: 'Photo de profil' },
-        { url: '/V5.png', name: 'Favicon' },
-        { url: '/CV-Felix-MARQUET.pdf', name: 'CV Français' },
-        { url: '/CV-Felix-MARQUET-English.pdf', name: 'CV Anglais' },
         { url: '/locales/fr/translation.json', name: 'Traductions FR' },
         { url: '/locales/en/translation.json', name: 'Traductions EN' }
       ];
