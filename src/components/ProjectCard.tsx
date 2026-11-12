@@ -21,10 +21,10 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
     return (
         <div className="group w-full sm:w-5/12 m-4 mx-auto p-6 rounded-xl border-2 border-gray-300 dark:border-gray-700">
             <a href={link}>
-                <h1 className="text-xl text-center font-bold dark:text-gray-200">
+                <h3 className="text-xl text-center font-bold dark:text-gray-200">
                     {t(`projects.${project.title}.title`)}{" "}
                     <FaExternalLinkAlt className="inline align-baseline" />
-                </h1>
+                </h3>
             </a>
             <hr className="my-4" />
             <p className="dark:text-gray-300">{t(`projects.${project.title}.description`)}</p>

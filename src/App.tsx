@@ -54,7 +54,19 @@ function App() {
         }, 500);
     }
 
-    useTranslation();
+    const { t } = useTranslation();
+
+    useEffect(() => {
+        // Garde <html lang>, le titre et la description SEO synchronisés avec la langue
+        const lang = i18n.language?.startsWith("fr") ? "fr" : "en";
+        document.documentElement.lang = lang;
+        document.title = lang === "fr"
+            ? "Félix MARQUET - Portfolio | Développeur & étudiant ingénieur ISEN"
+            : "Félix MARQUET - Portfolio | Developer & ISEN engineering student";
+        document.querySelector('meta[name="description"]')?.setAttribute("content", lang === "fr"
+            ? "Portfolio de Félix MARQUET, étudiant ingénieur en 5e année à l'ISEN Nantes et développeur en alternance : projets web, DevOps, Go, Rust, React et homelab."
+            : "Portfolio of Félix MARQUET, fifth-year engineering student at ISEN Nantes and work-study developer: web projects, DevOps, Go, Rust, React and homelab.");
+    }, [i18n.language, t]);
 
     const toggleLanguage = () => {
         i18n.changeLanguage(i18n.language === "fr" ? "en" : "fr");
