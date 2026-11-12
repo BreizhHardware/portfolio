@@ -2,6 +2,8 @@
 import React from 'react';
 import { FaGithub, FaTwitter, FaLinkedin, FaRegEnvelope } from 'react-icons/fa';
 import {useTranslation} from "react-i18next";
+import { motion } from 'motion/react';
+import RotatingText from './RotatingText';
 
 interface Social {
     github: string;
@@ -20,18 +22,34 @@ function Card({name, social: {github, twitter, linkedin, mail}}: CardProps){
     //Get avatar from gravatar using email
     const profile = `https://1.gravatar.com/avatar/4d43af207280d1d23e2a2905577c7b6167723fec2d33f946cc86f114c1a85b8d?size=256`;
     const { t } = useTranslation();
+    const roles = t('card.roles', { returnObjects: true }) as string[];
     return (
         <div className="w-full" id="top" data-testid="card">
-            <div className="flex flex-col items-center justify-center max-w-xs mx-auto bg-white shadow-xl rounded-xl p-5 dark:bg-gray-800">
+            <motion.div
+                className="flex flex-col items-center justify-center max-w-xs mx-auto bg-white shadow-xl rounded-xl p-5 dark:bg-gray-800"
+                initial={{ opacity: 0, y: 40, scale: 0.95 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                whileHover={{ y: -4 }}
+            >
                 <div className="">
-                    <img
+                    <motion.img
+                        whileHover={{ rotate: 6, scale: 1.08 }}
+                        transition={{ type: 'spring', stiffness: 250, damping: 12 }}
                         className="w-32 mx-auto shadow-xl rounded-full"
                         src={profile}
                         alt={name}
+                        width={128}
+                        height={128}
+                        fetchPriority="high"
+                        decoding="async"
                     />
                 </div>
                 <div className="text-center mt-5">
                     <h1 className="text-xl sm:text-2xl text-gray-900 dark:text-white">{name}</h1>
+                    {Array.isArray(roles) && (
+                        <p className="mt-1 text-blue-500 font-semibold"><RotatingText items={roles} /></p>
+                    )}
                     <p className="text-xs sm:text-base text-gray-600 pt-2 pb-4 px-5 w-auto inline-block border-b-2 dark:text-gray-200"> {t('card.title')} </p>
                     <div className="flex align-center justify-center mt-4">
                         <a
@@ -64,7 +82,7 @@ function Card({name, social: {github, twitter, linkedin, mail}}: CardProps){
                         </a>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </div>
     );
 }

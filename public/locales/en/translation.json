@@ -1,16 +1,28 @@
 {
   "about": {
     "title": "About me",
-    "description": "I am a fifth-year student at ISEN Nantes, currently in a work-study program at Horoquartz. I am passionate about computer science. I learned to code on my own and am currently learning C++ and PHP. I am also passionate about electronics and hardware. I have a homelab consisting of 5 servers, including a DELL T320 and a DELL T330 running Proxmox."
+    "description": "I'm a fifth-year student at ISEN Nantes, in the cybersecurity master's track, working in a work-study program at Horoquartz. A self-taught tech enthusiast, I'm as interested in development as in system administration, electronics and hardware. I'm currently preparing cybersecurity certifications and run a 5-server homelab, including a DELL T320 and a DELL T330 on Proxmox."
   },
   "card": {
-    "title": "Fifth year student at ISEN Nantes in work-study program at Horoquartz"
+    "title": "Fifth year student (Cybersecurity Master) at ISEN Nantes in work-study at Horoquartz",
+    "roles": [
+      "Developer",
+      "Cybersecurity student",
+      "Sysadmin",
+      "Homelabber"
+    ]
   },
   "projects": {
     "title": "My projects",
     "Justif": {
       "title": "Justif",
-      "description": "Open-source expense report management tool"
+      "description": "Open-source expense report management tool",
+      "details": [
+        "Open-source, self-hostable expense report management app",
+        "Built for international use: multilingual and multi-currency",
+        "React/TypeScript front end, Node.js back end, PostgreSQL database",
+        "Simple deployment with Docker"
+      ]
     },
     "Project C - ISEN CIR 1": {
       "title": "C Project - ISEN CIR 1",
@@ -22,7 +34,13 @@
     },
     "MercuryCloud": {
       "title": "MercuryCloud",
-      "description": "Game server and VPS hosting project. Technical support position, administrator of VPS, Game and web services."
+      "description": "Game server and VPS hosting project. Technical support position, administrator of VPS, Game and web services.",
+      "details": [
+        "Game server, VPS and web hosting provider",
+        "Customer technical support and administration of VPS, game and web services",
+        "Billing and accounts through WHMCS, hosting through cPanel and Plesk",
+        "Virtualization and maintenance of Linux servers"
+      ]
     },
     "Projet C++ - ISEN CIR 2": {
       "title": "C++ Project - ISEN CIR 2",
@@ -38,8 +56,16 @@
     },
     "Alternance Horoquartz": {
       "title": "Horoquartz Work-study",
-      "description": "Development of an update system for Horoquartz products."
-    }
+      "description": "Development of an update system for Horoquartz products.",
+      "details": [
+        "Development of an update system for Horoquartz products",
+        "REST APIs in Node.js and Go, PostgreSQL database",
+        "Containerization with Docker, deployment on Kubernetes (Azure)"
+      ]
+    },
+    "learnMore": "Learn more",
+    "visit": "View project",
+    "close": "Close"
   },
   "cv": {
     "title": "My resume",
@@ -51,7 +77,9 @@
     "cv": "My resume",
     "contact": "Contact",
     "experience": "Experience",
-    "github": "GitHub"
+    "github": "GitHub",
+    "cyber": "Cybersecurity",
+    "homelab": "Homelab"
   },
   "skills": {
     "beginner": "Beginner",
@@ -168,7 +196,14 @@
           "Database management with PostgreSQL",
           "Deployment with Docker and Kubernetes on Azure"
         ],
-        "technologies": ["Node.js", "Go", "PostgreSQL", "Docker", "Kubernetes", "Azure"]
+        "technologies": [
+          "Node.js",
+          "Go",
+          "PostgreSQL",
+          "Docker",
+          "Kubernetes",
+          "Azure"
+        ]
       },
       {
         "type": "education",
@@ -183,7 +218,13 @@
           "Specialization in cybersecurity",
           "Team projects and project management"
         ],
-        "technologies": ["C", "C++", "Python", "Linux", "Networks"]
+        "technologies": [
+          "C",
+          "C++",
+          "Python",
+          "Linux",
+          "Networks"
+        ]
       },
       {
         "type": "work",
@@ -199,7 +240,13 @@
           "Management of the WHMCS system for billing",
           "Virtualization and maintenance of Linux servers"
         ],
-        "technologies": ["Linux", "Virtualization", "CPanel", "Plesk", "WHMCS"]
+        "technologies": [
+          "Linux",
+          "Virtualization",
+          "CPanel",
+          "Plesk",
+          "WHMCS"
+        ]
       },
       {
         "type": "work",
@@ -214,7 +261,13 @@
           "Maintenance and updates of existing systems",
           "Advice on technology choices and performance optimization"
         ],
-        "technologies": ["React", "Node.js", "PHP", "MySQL", "Docker"]
+        "technologies": [
+          "React",
+          "Node.js",
+          "PHP",
+          "MySQL",
+          "Docker"
+        ]
       },
       {
         "type": "work",
@@ -229,7 +282,13 @@
           "Developed the CSI Stock Manager mobile app (React Native / Expo) for warehouse inventory",
           "Worked in English within the US and France IT team"
         ],
-        "technologies": ["Python", "C#", "React Native", "TypeScript", "Node.js"]
+        "technologies": [
+          "Python",
+          "C#",
+          "React Native",
+          "TypeScript",
+          "Node.js"
+        ]
       },
       {
         "type": "achievement",
@@ -244,7 +303,12 @@
           "Deployment on Raspberry Pi",
           "Multidisciplinary teamwork"
         ],
-        "technologies": ["C++", "QT", "Raspberry Pi", "Linux"]
+        "technologies": [
+          "C++",
+          "QT",
+          "Raspberry Pi",
+          "Linux"
+        ]
       }
     ]
   },
@@ -259,5 +323,43 @@
     "legend": "Contribution calendar",
     "totalCommits": "Total commits",
     "activity": "Recent activity"
+  },
+  "cyber": {
+    "title": "Cybersecurity",
+    "subtitle": "Cybersecurity master's at ISEN Nantes (5th year): I complement my developer background with a security-first approach.",
+    "areas": [
+      {
+        "title": "Network security",
+        "description": "Architecture, segmentation, firewalls and traffic monitoring."
+      },
+      {
+        "title": "Penetration testing",
+        "description": "Offensive methodology, vulnerability analysis and exploitation."
+      },
+      {
+        "title": "Application security",
+        "description": "Secure development, code review and dependency management."
+      },
+      {
+        "title": "System hardening",
+        "description": "Securing Linux servers and virtualized infrastructure."
+      }
+    ],
+    "certifications": {
+      "title": "Certifications",
+      "empty": "Several certifications currently in preparation."
+    },
+    "status": {
+      "inProgress": "in progress",
+      "obtained": "obtained"
+    }
+  },
+  "homelab": {
+    "title": "Homelab",
+    "subtitle": "My personal lab to experiment with virtualization, deployment and security.",
+    "stats": {
+      "servers": "Servers",
+      "proxmox": "Proxmox hosts"
+    }
   }
 }

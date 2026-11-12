@@ -1,16 +1,28 @@
 {
   "about": {
     "title": "A propos de moi",
-    "description": "Je suis étudiant en 5e année à l'ISEN Nantes en alternance chez Horoquartz. Je suis passionné par l'informatique. J'ai appris à coder en autodidacte et je suis actuellement en train d'apprendre le C++ et le PHP. Je suis également passionné par l'électronique et le hardware. Je possède un homelab composé de 5 serveurs, dont un DELL T320 et un DELL T330 sous proxmox."
+    "description": "Je suis étudiant en 5e année à l'ISEN Nantes, en master cybersécurité, et en alternance chez Horoquartz. Autodidacte passionné par l'informatique, je m'intéresse autant au développement qu'à l'administration système, à l'électronique et au hardware. Je prépare actuellement des certifications en cybersécurité et je fais tourner un homelab de 5 serveurs, dont un DELL T320 et un DELL T330 sous Proxmox."
   },
   "card": {
-    "title": "Etudiant en 5e année a l'ISEN Nantes en alternance chez Horoquartz"
+    "title": "Étudiant en 5e année (Master cybersécurité) à l'ISEN Nantes en alternance chez Horoquartz",
+    "roles": [
+      "Développeur",
+      "Étudiant en cybersécurité",
+      "Admin système",
+      "Homelabber"
+    ]
   },
   "projects": {
     "title": "Mes projets",
     "Justif": {
       "title": "Justif",
-      "description": "Outils de gestion de notes de frais open-source"
+      "description": "Outils de gestion de notes de frais open-source",
+      "details": [
+        "Application open-source et auto-hébergeable de gestion de notes de frais",
+        "Pensée pour un usage international : multilingue et multidevise",
+        "Front en React/TypeScript, back Node.js, base PostgreSQL",
+        "Déploiement simplifié avec Docker"
+      ]
     },
     "Project C - ISEN CIR 1": {
       "title": "Projet C - ISEN CIR 1",
@@ -22,7 +34,13 @@
     },
     "MercuryCloud": {
       "title": "MercuryCloud",
-      "description": "Projet d'herbergeur de serveur de jeu et VPS. Poste de support technique, administrateur des service VPS, Game et web."
+      "description": "Projet d'herbergeur de serveur de jeu et VPS. Poste de support technique, administrateur des service VPS, Game et web.",
+      "details": [
+        "Hébergeur de serveurs de jeu, VPS et hébergement web",
+        "Support technique client et administration des services VPS, jeu et web",
+        "Gestion de la facturation et des comptes via WHMCS, hébergement via cPanel et Plesk",
+        "Virtualisation et maintenance de serveurs Linux"
+      ]
     },
     "Projet C++ - ISEN CIR 2": {
       "title": "Projet C++ - ISEN CIR 2",
@@ -38,8 +56,16 @@
     },
     "Alternance Horoquartz": {
       "title": "Alternance Horoquartz",
-      "description": "Développement d'un système de mise à jour pour les produits Horoquartz."
-    }
+      "description": "Développement d'un système de mise à jour pour les produits Horoquartz.",
+      "details": [
+        "Développement d'un système de mise à jour des produits Horoquartz",
+        "APIs REST en Node.js et Go, base PostgreSQL",
+        "Conteneurisation avec Docker, déploiement sur Kubernetes (Azure)"
+      ]
+    },
+    "learnMore": "En savoir plus",
+    "visit": "Voir le projet",
+    "close": "Fermer"
   },
   "cv": {
     "title": "Mon CV",
@@ -51,7 +77,9 @@
     "cv": "Mon CV",
     "contact": "Contact",
     "experience": "Expérience",
-    "github": "GitHub"
+    "github": "GitHub",
+    "cyber": "Cybersécurité",
+    "homelab": "Homelab"
   },
   "skills": {
     "beginner": "Débutant",
@@ -59,8 +87,8 @@
     "expert": "Expert",
     "examples": {
       "C": {
-      "title": "Projets C",
-      "description": "Projet de fin de 1ère année à l'ISEN, algorithmes de base, création d'une api REST"
+        "title": "Projets C",
+        "description": "Projet de fin de 1ère année à l'ISEN, algorithmes de base, création d'une api REST"
       },
       "C++": {
         "title": "Projets C++",
@@ -119,10 +147,10 @@
       "title": "Informations de contact",
       "email": "Email",
       "status": "Statut",
-    "statusValue": "Étudiant ISEN - Alternant chez Horoquartz",
-    "response": "Réponse",
-    "responseValue": "Généralement sous 24h"
-      },
+      "statusValue": "Étudiant ISEN - Alternant chez Horoquartz",
+      "response": "Réponse",
+      "responseValue": "Généralement sous 24h"
+    },
     "subjects.title": "Sujets d'intérêt",
     "subjects.list": [
       "Développement Web",
@@ -168,7 +196,14 @@
           "Gestion des bases de données PostgreSQL",
           "Déploiement avec Docker et Kubernetes sur Azure"
         ],
-        "technologies": ["Node.js", "Go", "PostgreSQL", "Docker", "Kubernetes", "Azure"]
+        "technologies": [
+          "Node.js",
+          "Go",
+          "PostgreSQL",
+          "Docker",
+          "Kubernetes",
+          "Azure"
+        ]
       },
       {
         "type": "education",
@@ -183,7 +218,13 @@
           "Spécialisation en cybersécurité",
           "Projets en équipe et gestion de projet"
         ],
-        "technologies": ["C", "C++", "Python", "Linux", "Réseaux"]
+        "technologies": [
+          "C",
+          "C++",
+          "Python",
+          "Linux",
+          "Réseaux"
+        ]
       },
       {
         "type": "work",
@@ -199,7 +240,13 @@
           "Gestion du système WHMCS pour la facturation",
           "Virtualisation et maintenance des serveurs Linux"
         ],
-        "technologies": ["Linux", "Virtualisation", "CPanel", "Plesk", "WHMCS"]
+        "technologies": [
+          "Linux",
+          "Virtualisation",
+          "CPanel",
+          "Plesk",
+          "WHMCS"
+        ]
       },
       {
         "type": "work",
@@ -214,7 +261,13 @@
           "Maintenance et mise à jour des systèmes existants",
           "Conseil en choix technologiques et optimisation des performances"
         ],
-        "technologies": ["React", "Node.js", "PHP", "MySQL", "Docker"]
+        "technologies": [
+          "React",
+          "Node.js",
+          "PHP",
+          "MySQL",
+          "Docker"
+        ]
       },
       {
         "type": "work",
@@ -229,7 +282,13 @@
           "Application mobile CSI Stock Manager (React Native / Expo) pour les inventaires d'entrepôt",
           "Travail en anglais au sein de l'équipe IT américaine et française"
         ],
-        "technologies": ["Python", "C#", "React Native", "TypeScript", "Node.js"]
+        "technologies": [
+          "Python",
+          "C#",
+          "React Native",
+          "TypeScript",
+          "Node.js"
+        ]
       },
       {
         "type": "achievement",
@@ -244,7 +303,12 @@
           "Déploiement sur Raspberry Pi",
           "Travail en équipe multidisciplinaire"
         ],
-        "technologies": ["C++", "QT", "Raspberry Pi", "Linux"]
+        "technologies": [
+          "C++",
+          "QT",
+          "Raspberry Pi",
+          "Linux"
+        ]
       }
     ]
   },
@@ -259,5 +323,43 @@
     "legend": "Calendrier des contributions",
     "totalCommits": "Total des commits",
     "activity": "Activité récente"
+  },
+  "cyber": {
+    "title": "Cybersécurité",
+    "subtitle": "Master cybersécurité à l'ISEN Nantes (5e année) : je complète ma formation de développeur par une approche sécurité.",
+    "areas": [
+      {
+        "title": "Sécurité réseau",
+        "description": "Architecture, segmentation, pare-feu et supervision des flux."
+      },
+      {
+        "title": "Tests d'intrusion",
+        "description": "Méthodologie offensive, analyse de vulnérabilités et exploitation."
+      },
+      {
+        "title": "Sécurité applicative",
+        "description": "Développement sécurisé, revue de code et gestion des dépendances."
+      },
+      {
+        "title": "Durcissement système",
+        "description": "Sécurisation de serveurs Linux et d'infrastructures virtualisées."
+      }
+    ],
+    "certifications": {
+      "title": "Certifications",
+      "empty": "Plusieurs certifications en cours de préparation."
+    },
+    "status": {
+      "inProgress": "en cours",
+      "obtained": "obtenue"
+    }
+  },
+  "homelab": {
+    "title": "Homelab",
+    "subtitle": "Mon laboratoire personnel pour expérimenter la virtualisation, le déploiement et la sécurité.",
+    "stats": {
+      "servers": "Serveurs",
+      "proxmox": "Hôtes Proxmox"
+    }
   }
 }
