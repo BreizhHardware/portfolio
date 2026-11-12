@@ -1,16 +1,16 @@
 {
   "about": {
     "title": "About me",
-    "description": "I am a fourth-year student at ISEN Nantes, currently in a work-study program at Horoquartz. I am passionate about computer science. I learned to code on my own and am currently learning Rust and Go. I am also passionate about electronics and hardware. I have a homelab consisting of 3 servers: a DELL T320, a DELL T330, and a Dell Precision T3610, all running Proxmox."
+    "description": "I am a fifth-year student at ISEN Nantes, currently in a work-study program at Horoquartz. I am passionate about computer science. I learned to code on my own and am currently learning C++ and PHP. I am also passionate about electronics and hardware. I have a homelab consisting of 5 servers, including a DELL T320 and a DELL T330 running Proxmox."
   },
   "card": {
-    "title": "Fourth year student at ISEN Nantes in work-study program at Horoquartz"
+    "title": "Fifth year student at ISEN Nantes in work-study program at Horoquartz"
   },
   "projects": {
     "title": "My projects",
-    "Front end starter": {
-        "title": "Front end starter",
-        "description": "My personal starter for front end projects"
+    "Justif": {
+      "title": "Justif",
+      "description": "Open-source expense report management tool"
     },
     "Project C - ISEN CIR 1": {
       "title": "C Project - ISEN CIR 1",
@@ -190,8 +190,9 @@
         "title": "Technical Support & VPS Admin",
         "organization": "MercuryCloud",
         "location": "Remote",
-        "startDate": "2021",
+        "startDate": "2023",
         "endDate": "Current",
+        "current": true,
         "description": [
           "Technical support for game servers and VPS",
           "Administration of CPanel and Plesk services",
@@ -199,6 +200,36 @@
           "Virtualization and maintenance of Linux servers"
         ],
         "technologies": ["Linux", "Virtualization", "CPanel", "Plesk", "WHMCS"]
+      },
+      {
+        "type": "work",
+        "title": "Self-employed - Developer",
+        "organization": "Freelance",
+        "location": "Remote",
+        "startDate": "2026",
+        "endDate": "Current",
+        "current": true,
+        "description": [
+          "Development of websites and applications for clients",
+          "Maintenance and updates of existing systems",
+          "Advice on technology choices and performance optimization"
+        ],
+        "technologies": ["React", "Node.js", "PHP", "MySQL", "Docker"]
+      },
+      {
+        "type": "work",
+        "title": "IT Internship - Cuisine Solutions",
+        "organization": "Cuisine Solutions",
+        "location": "Sterling, Virginia, USA",
+        "startDate": "July 2026",
+        "endDate": "September 2026",
+        "description": [
+          "Evaluated cobot implementation for production lines (comparison, schematics, pricing report)",
+          "Built a TV Controller (Python, C#) to manage in-facility display screens",
+          "Developed the CSI Stock Manager mobile app (React Native / Expo) for warehouse inventory",
+          "Worked in English within the US and France IT team"
+        ],
+        "technologies": ["Python", "C#", "React Native", "TypeScript", "Node.js"]
       },
       {
         "type": "achievement",
