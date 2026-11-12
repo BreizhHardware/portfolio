@@ -67,24 +67,38 @@ jobs:
           USER: ${{ secrets.SERVER_USERNAME }}
           PASS: ${{ secrets.SERVER_PASSWORD }}
 
-      - name: Smoke test
-        id: smoke
+      - name: Verify deployed files
+        id: verify
         run: |
-          for i in $(seq 1 10); do
-            code=$(curl -sL --max-time 10 -A "$UA" -o body.html -w '%{http_code}' "$SITE_URL" || true)
-            echo "Attempt $i: HTTP $code"
-            if [ "$code" = "200" ] && grep -q 'id="root"' body.html; then exit 0; fi
-            sleep 3
-          done
-          echo "--- Last response (first 500 bytes) ---"
-          head -c 500 body.html
-          exit 1
+          lftp -e "
+            set cmd:fail-exit yes;
+            open -p $PORT -u $USER,$PASS sftp://$HOST;
+            cat webroot/index.html > /dev/null;
+            bye"
+          lftp -e "
+            open -p $PORT -u $USER,$PASS sftp://$HOST;
+            cat webroot/index.html;
+            bye" | grep -q 'id="root"'
+        env:
+          HOST: ${{ secrets.SERVER_HOST }}
+          PORT: ${{ secrets.SERVER_PORT }}
+          USER: ${{ secrets.SERVER_USERNAME }}
+          PASS: ${{ secrets.SERVER_PASSWORD }}
+
+      - name: Public URL check (informational)
+        continue-on-error: true
+        run: |
+          code=$(curl -sL --max-time 10 -A "$UA" -o /dev/null -w '%{http_code}' "$SITE_URL" || true)
+          echo "HTTP $code"
+          if [ "$code" != "200" ]; then
+            echo "::warning::Public URL returned HTTP $code (Cloudflare may challenge GitHub runners)"
+          fi
         env:
           SITE_URL: ${{ vars.SITE_URL }}
-          UA: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36
+          UA: github-action-breizhhardware-ci
 
       - name: Rollback on failure
-        if: failure() && steps.smoke.outcome == 'failure'
+        if: failure() && steps.verify.outcome == 'failure'
         run: |
           lftp -e "
             set cmd:fail-exit yes;
